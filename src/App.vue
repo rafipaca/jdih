@@ -1,26 +1,19 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/Header.vue'
+import Footer from './components/Footer.vue'
 </script>
 
 <!-- Disini tuh tempat buat yang elemen static kayak navbar, footer -->
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
   <!-- Navbar -->
-  <RouterView />
+  <Header />
+  <!-- Router view digunakan untuk memberikan content secara full  -->
+  <RouterView class="w-[70%] mx-auto" />
   <!-- Footer -->
+  <Footer />
 </template>
 
 <style scoped>
