@@ -26,7 +26,7 @@
           >Feed</a
         >
         <a
-          href="#"
+          href="/about"
           class="hover:text-gray-300 text-base font-bold"
           style="font-size: 16px; margin-right: px"
           >Tentang</a
