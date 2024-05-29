@@ -65,8 +65,10 @@
           <p class="text-gray-600"><i class="fas fa-calendar-alt"></i> Senin - Jumat, 08:00 - 15:30 WIB</p>
         </div>
       </div>
-      <div class="mt-8 text-center text-white bg-green-700 py-4">
-        <p>Jaringan Dokumentasi dan Informasi Hukum | Kantor Biro Hukum Provinsi Lampung © 2024. All Rights Reserved.</p>
+      <!-- Footer -->
+      <footer class="self-stretch h-[147px] relative bg-darkslategray z-[1]"></footer>
+      <div class="absolute !m-[0] bottom-[73px] left-[calc(50%_-_461px)] text-base font-medium text-powderblue text-center z-[2]">
+        Jaringan Dokumentasi dan Informasi Hukum | Kantor Biro Hukum Provinsi Lampung © 2024. All Rights Reserved.
       </div>
     </div>
   </section>

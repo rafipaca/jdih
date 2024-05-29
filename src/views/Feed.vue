@@ -17,9 +17,7 @@
         <div
           class="flex flex-row items-start justify-center gap-[1.125rem] max-w-full mq450:flex-wrap"
         >
-          <div
-            class="h-[2.438rem] w-[2.438rem] relative rounded-mini bg-powderblue"
-          >
+          <div class="h-[2.438rem] w-[2.438rem] relative rounded-mini bg-powderblue">
             <div
               class="absolute top-[0rem] left-[0rem] rounded-mini bg-powderblue w-full h-full hidden"
             />
@@ -75,9 +73,7 @@
                 >5</b
               >
             </div>
-            <div
-              class="h-[2.438rem] w-[2.438rem] relative rounded-mini bg-powderblue"
-            >
+            <div class="h-[2.438rem] w-[2.438rem] relative rounded-mini bg-powderblue">
               <div
                 class="absolute top-[0rem] left-[0rem] rounded-mini bg-powderblue w-full h-full hidden"
               />
@@ -99,13 +95,13 @@
   </div>
 </template>
 <script>
-  import { defineComponent } from "vue";
-  import Frame1 from "../components/Frame1.vue";
-  import Frame from "../components/Frame.vue";
-  import Navbar from "../components/Navbar.vue";
+import { defineComponent } from 'vue'
+import Frame1 from '../components/Frame1.vue'
+import Frame from '../components/Frame.vue'
+import Navbar from '../components/Navbar.vue'
 
-  export default defineComponent({
-    name: "Feed",
-    components: { Frame1, Frame, Navbar },
-  });
+export default defineComponent({
+  name: 'Feed',
+  components: { Frame1, Frame, Navbar }
+})
 </script>

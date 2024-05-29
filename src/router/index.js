@@ -25,6 +25,7 @@ const router = createRouter({
       name: 'document',
       component: DocView
     }
+    
   ]
 })
 
