@@ -40,15 +40,13 @@ const documents = [
   <div class="p-4">
     <p class="text-red-600">Ini halaman dokumen</p>
     <DocumentFilter />
-    
+
     <div class="flex">
       <!-- Section 1: Sidebar Checkbox -->
       <SidebarCheckbox class="w-1/4" />
       <!-- Section 2: Document Filter and List -->
       <div class="w-3/4">
-        
-        <div class="flex space-x-4 mt-4">
-        </div>
+        <div class="flex space-x-4 mt-4"></div>
         <DocumentList :documents="documents" />
       </div>
     </div>
