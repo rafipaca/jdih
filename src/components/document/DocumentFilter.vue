@@ -30,6 +30,7 @@ export default {
 <template>
   <div class="mb-4 w-full">
     <h2 class="text-2xl font-bold">Cari dokumen hukum!</h2>
+    <div class="border border-teal-500 w-20"></div>
     <div class="flex space-x-2 mt-4 w-full">
       <!-- Bagian pertama untuk input "Judul" -->
       <div class="relative flex items-center w-1/2">

@@ -17,7 +17,9 @@
         <div
           class="flex flex-row items-start justify-center gap-[1.125rem] max-w-full mq450:flex-wrap"
         >
-          <div class="h-[2.438rem] w-[2.438rem] relative rounded-mini bg-powderblue">
+          <div
+            class="h-[2.438rem] w-[2.438rem] relative rounded-mini bg-powderblue"
+          >
             <div
               class="absolute top-[0rem] left-[0rem] rounded-mini bg-powderblue w-full h-full hidden"
             />
@@ -88,12 +90,12 @@
           </div>
         </div>
       </div>
-      <Frame1 />
+      <frame />
     </section>
     <div
       class="absolute top-[106.188rem] left-[63.5rem] w-[6.25rem] h-[6.25rem] overflow-hidden hidden"
     />
-    <Navbar/>
+    <Navbar />
   </div>
 </template>
 <script>

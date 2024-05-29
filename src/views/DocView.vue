@@ -41,7 +41,12 @@ const documents = [
 
 <template>
   <div class="p-4">
-    <p class="text-red-600">Ini halaman dokumen</p>
+    <div class="text-sm breadcrumbs">
+      <ul>
+        <li><a>Documents</a></li> 
+        <li></li>
+      </ul>
+    </div>
     <DocumentFilter />
     <div class="flex">
       <!-- Section 1: Sidebar Checkbox -->
