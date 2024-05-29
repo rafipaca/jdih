@@ -34,23 +34,23 @@ export default {
       <!-- Bagian pertama untuk input "Judul" -->
       <div class="relative flex items-center w-1/2">
         <img src="@/assets/book.png" alt="Icon" class="absolute left-0 w-5 h-5 ml-4" />
-        <input type="text" placeholder="Judul" class="input shadow-lg input-bordered pl-12 w-full placeholder-center" />
+        <input type="text" placeholder="Judul" class="input shadow-lg input-bordered pl-12 w-full placeholder-center" style="height: 55px;" />
       </div>
       <!-- Bagian kedua untuk input "Nomor", "Tahun", dan button -->
       <div class="flex space-x-2 w-1/2">
         <!-- Input "Nomor" -->
         <div class="relative flex items-center w-1/3">
           <img src="@/assets/neraca.png" alt="Icon" class="absolute left-0 w-5 h-5 ml-4" />
-          <input type="text" placeholder="Nomor" class="input shadow-lg input-bordered pl-12 w-full placeholder-center " />
+          <input type="text" placeholder="Nomor" class="input shadow-lg input-bordered pl-12 w-full placeholder-center" style="height: 55px;" />
         </div>
         <!-- Input "Tahun" -->
         <div class="relative flex items-center w-1/3">
           <img src="@/assets/calendar.png" alt="Icon" class="absolute left-0 w-5 h-5 ml-4" />
-          <input type="text" placeholder="Tahun" class="input shadow-lg input-bordered pl-12 w-full placeholder-center" />
+          <input type="text" placeholder="Tahun" class="input shadow-lg input-bordered pl-12 w-full placeholder-center" style="height: 55px;" />
         </div>
         <!-- Button -->
         <div class="flex justify-items-end justify-end w-1/3">
-          <button class="btn w-full text-slate-50 bg-[#ffc067] shadow-lg">Temukan!</button>
+          <button class="btn w-full text-slate-50 bg-[#ffc067] shadow-lg" style="height: 55px;">Temukan!</button>
         </div>
       </div>
     </div>

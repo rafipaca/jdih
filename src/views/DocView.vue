@@ -8,8 +8,9 @@ const documents = [
   {
     id: 1,
     date: '13',
+    month: 'DES',
     title: 'KEPUTUSAN GUBERNUR Nomor 324 Tahun 2024',
-    description: 'Tentang Pengunjukan Kuasa Pengguna Anggaran...',
+    description: 'Tentang Penunjukan Kuasa Penguna Anggara, Pejabat Pembuat Komitmen, Peabat Pendatanganan Surat Perintah Membatar dan Bendahara Pengeluaran Anggaran Pendapatan dan Belanja Negara/Dekonsentrasi Pada Dinas Kesehatan Provinsi Lampung Tahun Anggara 2024',
     year: 2024,
     downloads: 2,
     views: 4
@@ -17,8 +18,9 @@ const documents = [
   {
     id: 2,
     date: '13',
+    month: 'DES',
     title: 'KEPUTUSAN GUBERNUR Nomor 324 Tahun 2024',
-    description: 'Tentang Pengunjukan Kuasa Pengguna Anggaran...',
+    description: 'Tentang Penunjukan Kuasa Penguna Anggara, Pejabat Pembuat Komitmen, Peabat Pendatanganan Surat Perintah Membatar dan Bendahara Pengeluaran Anggaran Pendapatan dan Belanja Negara/Dekonsentrasi Pada Dinas KEsehatan Provinsi Lampung Tahun Anggara 2024',
     year: 2024,
     downloads: 2,
     views: 4
@@ -26,8 +28,9 @@ const documents = [
   {
     id: 3,
     date: '13',
+    month: 'DES',
     title: 'KEPUTUSAN GUBERNUR Nomor 324 Tahun 2024',
-    description: 'Tentang Pengunjukan Kuasa Pengguna Anggaran...',
+    description: 'Tentang Penunjukan Kuasa Penguna Anggara, Pejabat Pembuat Komitmen, Peabat Pendatanganan Surat Perintah Membatar dan Bendahara Pengeluaran Anggaran Pendapatan dan Belanja Negara/Dekonsentrasi Pada Dinas KEsehatan Provinsi Lampung Tahun Anggara 2024',
     year: 2024,
     downloads: 2,
     views: 4
@@ -40,15 +43,11 @@ const documents = [
   <div class="p-4">
     <p class="text-red-600">Ini halaman dokumen</p>
     <DocumentFilter />
-    
     <div class="flex">
       <!-- Section 1: Sidebar Checkbox -->
       <SidebarCheckbox class="w-1/4" />
       <!-- Section 2: Document Filter and List -->
       <div class="w-3/4">
-        
-        <div class="flex space-x-4 mt-4">
-        </div>
         <DocumentList :documents="documents" />
       </div>
     </div>
@@ -56,5 +55,5 @@ const documents = [
 </template>
 
 <style scoped>
-/* Tambahkan style jika diperlukan */
+/* Add additional styles if needed */
 </style>
