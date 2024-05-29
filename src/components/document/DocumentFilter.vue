@@ -1,32 +1,3 @@
-<!-- <template>
-  <div class="mb-4">
-    <h2 class="text-2xl font-bold">Cari dokumen hukum!</h2>
-    <div class="flex space-x-4 mt-4">
-      <input type="text" placeholder="Judul" class="input input-bordered w-full max-w-xs" />
-      <input type="text" placeholder="Nomor" class="input input-bordered w-full max-w-xs" />
-      <input type="text" placeholder="Tahun" class="input input-bordered w-full max-w-xs" />
-      <button class="btn btn-primary">Temukan!</button>
-    </div>
-  </div>
-</template>
-
-<script>
-export default {
-  name: 'DocumentFilter'
-}
-</script>
-
-<style scoped>
-/* Tambahkan style jika diperlukan */
-</style> -->
-
-<!-- Ini adalah batas -->
-<style>
-.placeholder-center {
-  text-align: center;
-}
-</style>
-
 <template>
   <div class="mb-4 w-full">
     <h2 class="text-2xl font-bold">Cari dokumen hukum!</h2>
@@ -35,35 +6,99 @@ export default {
       <!-- Bagian pertama untuk input "Judul" -->
       <div class="relative flex items-center w-1/2">
         <img src="@/assets/book.png" alt="Icon" class="absolute left-0 w-5 h-5 ml-4" />
-        <input type="text" placeholder="Judul" class="input shadow-lg input-bordered pl-12 w-full placeholder-center" style="height: 55px;" />
+        <input
+          id="judul"
+          type="text"
+          v-model="searchTerms.title"
+          placeholder="Judul"
+          class="input shadow-lg input-bordered pl-12 w-full placeholder-center"
+          style="height: 55px;"
+          @focus="handleFocus"
+          @blur="handleBlur"
+        />
       </div>
-      <!-- Bagian kedua untuk input "Nomor", "Tahun", dan button -->
+      <!-- Bagian kedua untuk input "Nomor", "Tahun", dan tombol Temukan! -->
       <div class="flex space-x-2 w-1/2">
         <!-- Input "Nomor" -->
         <div class="relative flex items-center w-1/3">
           <img src="@/assets/neraca.png" alt="Icon" class="absolute left-0 w-5 h-5 ml-4" />
-          <input type="text" placeholder="Nomor" class="input shadow-lg input-bordered pl-12 w-full placeholder-center" style="height: 55px;" />
+          <input
+            id="nomor"
+            type="text"
+            v-model="searchTerms.number"
+            placeholder="Nomor"
+            class="input shadow-lg input-bordered pl-12 w-full placeholder-center"
+            style="height: 55px;"
+            @focus="handleFocus"
+            @blur="handleBlur"
+          />
         </div>
         <!-- Input "Tahun" -->
         <div class="relative flex items-center w-1/3">
           <img src="@/assets/calendar.png" alt="Icon" class="absolute left-0 w-5 h-5 ml-4" />
-          <input type="text" placeholder="Tahun" class="input shadow-lg input-bordered pl-12 w-full placeholder-center" style="height: 55px;" />
+          <input
+            id="tahun"
+            type="text"
+            v-model="searchTerms.year"
+            placeholder="Tahun"
+            class="input shadow-lg input-bordered pl-12 w-full placeholder-center"
+            style="height: 55px;"
+            @focus="handleFocus"
+            @blur="handleBlur"
+          />
         </div>
-        <!-- Button -->
+        <!-- Tombol "Temukan!" -->
         <div class="flex justify-items-end justify-end w-1/3">
-          <button class="btn w-full text-slate-50 bg-[#ffc067] shadow-lg" style="height: 55px;">Temukan!</button>
+          <button class="btn w-full text-slate-50 bg-[#ffc067] shadow-lg" style="height: 55px;" @click="search">Temukan!</button>
         </div>
       </div>
+    </div>
+    <!-- Error message -->
+    <div v-if="showErrorMessage" class="text-red-500 mt-6 ml-52 flex justify-center items-center h-10">
+      Tidak ada hasil yang ditemukan.
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'DocumentFilter'
+  name: 'DocumentFilter',
+  data() {
+    return {
+      searchTerms: {
+        title: '',
+        number: '',
+        year: ''
+      },
+      showErrorMessage: false // Flag to control error message visibility
+    }
+  },
+  methods: {
+    handleFocus(event) {
+      event.target.placeholder = '';
+    },
+    handleBlur(event) {
+      const placeholders = {
+        judul: 'Judul',
+        nomor: 'Nomor',
+        tahun: 'Tahun'
+      };
+      const id = event.target.id;
+      if (!event.target.value) {
+        event.target.placeholder = placeholders[id];
+      }
+    },
+    search() {
+      this.$emit('search', this.searchTerms);
+      // Show error message by default
+      this.showErrorMessage = this.filteredDocuments.length === 0;
+    }
+  }
 }
 </script>
 
 <style scoped>
-/* Tambahkan style jika diperlukan */
+.placeholder-center {
+  text-align: center;
+} 
 </style>

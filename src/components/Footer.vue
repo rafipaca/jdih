@@ -1,6 +1,6 @@
 <template>
-  <section class="absolute top-[1903px] left-[0px] w-full flex flex-row items-start justify-start max-w-full z-[1] text-left text-13xl text-gray1-200 font-montserrat">
-    <div class="flex-1 flex flex-col items-start justify-start pt-[106px] px-0 pb-0 box-border relative gap-[69px] max-w-full mq750:gap-[17px] mq1050:gap-[34px]">
+  <section class="absolute w-full flex flex-row items-start justify-start max-w-full z-[1] text-left text-13xl text-gray1-200 bg-[#F6F6F6]">
+    <div class="flex-1 flex flex-col items-start justify-start pt-[106px] px-0 pb-0 box-border relative gap-[69px]">
       <div class="w-full h-[467px] absolute !m-[0] top-[0px] right-[0px] left-[0px] bg-whitesmoke"></div>
       <div class="self-stretch flex flex-row items-start justify-center py-0 px-5 box-border max-w-full">
         <div class="w-[1598px] flex flex-row items-start justify-between max-w-full gap-[20px] lg:flex-wrap">
@@ -8,20 +8,21 @@
           <div class="w-[633px] flex flex-col items-start justify-start gap-[21px] max-w-full">
             <h1 class="m-0 relative text-inherit font-semibold font-inherit z-[1] mq450:text-lgi mq1050:text-7xl">Media Sosial</h1>
             <div class="self-stretch flex flex-row items-start justify-start pt-0 px-0 pb-[9px] box-border max-w-full text-base text-gray1-100">
-              <p class="m-0 flex-1 relative inline-block max-w-full z-[1]">
+              <p class="">
                 Silakan kunjungi media sosial kami untuk mengetahui kegiatan JDIH terkini
               </p>
             </div>
             <div class="flex flex-row items-start justify-start gap-[26px]">
-              <img class="h-[38px] w-[38px] relative min-h-[38px] z-[1]" loading="lazy" alt="" />
-              <img class="h-[38px] w-[38px] relative min-h-[38px] z-[1]" loading="lazy" alt="" />
-              <img class="h-[38px] w-[38px] relative min-h-[38px] z-[1]" loading="lazy" alt="" />
+              <img class="" loading="lazy" alt="" src="/src/assets/facebook.png"/>
+              <img class="" loading="lazy" alt="" src="/src/assets/twitter.png"/>
+              <img class="" loading="lazy" alt="" src="/src/assets/instagram.png"/>
+              <img class="" loading="lazy" alt="" src="/src/assets/youtube.png"/>
               <img class="self-stretch w-[53px] relative max-h-full min-h-[38px] z-[1]" loading="lazy" alt="" />
             </div>
           </div>
           <!-- Hubungi Kami -->
           <div class="w-[472px] flex flex-col items-start justify-start gap-[21px] max-w-full text-base">
-            <h1 class="m-0 relative text-13xl font-semibold font-inherit z-[1] mq450:text-lgi mq1050:text-7xl">Hubungi Kami</h1>
+            <h1 class="m-0 relative text-13xl font-semibold ">Hubungi Kami</h1>
             <div class="self-stretch flex flex-row items-start justify-start pt-0 px-0 pb-2 box-border max-w-full text-gray1-100">
               <p class="m-0 flex-1 relative inline-block max-w-full z-[1]">
                 <span class="block">Sekretariat Daerah Provinsi Lampung</span>
@@ -33,7 +34,7 @@
               <div class="self-stretch flex flex-col items-start justify-start gap-[16px]">
                 <!-- Nomor Telepon -->
                 <div class="flex flex-row items-start justify-start gap-[21px]">
-                  <img class="h-[27px] w-[27px] relative min-h-[27px] z-[1]" loading="lazy" alt="" />
+                  <img class="h-[27px] w-[27px] relative min-h-[27px] z-[1]" loading="lazy" alt="" src=""/>
                   <div class="flex flex-col items-start justify-start pt-1 px-0 pb-0">
                     <div class="relative font-medium inline-block min-w-[104px] z-[1]">(0721) 481107</div>
                   </div>

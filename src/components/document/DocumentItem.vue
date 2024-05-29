@@ -1,9 +1,9 @@
 <template>
-  <div class="card card-side bg-base-100 border shadow-lg mb-4 h-52 pt-9 pb-9">
+  <div class="card card-side bg-base-100 border shadow-lg mb-4 h-52 pt-9 pb-9 hover:bg-[#9AD0C2] transition-colors duration-300">
     <!-- Left section for the date and month (1/6 of the card) -->
     <div class="flex flex-col items-center justify-center text-center text-black w-1/6 rounded-l-lg border-r-2 border-[#006859]">
-        <span class="text-5xl font-black text-[#004E43]">{{ document.date }}</span>
-        <div class="rounded-lg bg-green-500 p-1">
+      <span class="text-5xl font-black text-[#004E43]">{{ document.date }}</span>
+      <div class="rounded-lg bg-[#006859] mt-4 p-1 pr-4 pl-4">
         <span class="text-sm text-white">{{ document.month }}</span>
       </div>
     </div>
@@ -26,7 +26,7 @@
         </div>
       </div>
       <div class="card-actions justify-end">
-        <button class="btn text-slate-50 bg-[#ffc067] shadow-lg">Unduh</button>
+        <button class="btn text-slate-50 bg-[#ffc067] shadow-lg hover:bg-white">Unduh</button>
       </div>
     </div>
   </div>
@@ -53,5 +53,19 @@ export default {
 }
 .btn-secondary {
   @apply bg-transparent hover:bg-gray-100;
+}
+
+.card:hover {
+  @apply bg-green-100;
+}
+
+.card {
+  transition: background-color 0.3s ease;
+}
+
+.card:hover .btn {
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 </style>

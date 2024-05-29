@@ -9,25 +9,25 @@
       <nav class="space-x-4">
         <a
           href="/"
-          class="hover:text-gray-300 text-base font-bold"
+          class="hover:text-gray-300 text-base font-medium"
           style="font-size: 16px; margin-right: 35px"
           >Beranda</a
         >
         <a
           href="/dokumen"
-          class="hover:text-gray-300 text-base font-bold"
+          class="hover:text-gray-300 text-base font-medium"
           style="font-size: 16px; margin-right: 35px"
           >Dokumen</a
         >
         <a
           href="#"
-          class="hover:text-gray-300 text-base font-bold"
+          class="hover:text-gray-300 text-base font-medium"
           style="font-size: 16px; margin-right: 35px"
           >Feed</a
         >
         <a
           href="/about"
-          class="hover:text-gray-300 text-base font-bold"
+          class="hover:text-gray-300 text-base font-medium"
           style="font-size: 16px; margin-right: px"
           >Tentang</a
         >
