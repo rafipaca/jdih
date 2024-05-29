@@ -22,9 +22,9 @@ export default {
 
 <!-- Ini adalah batas -->
 <style>
-  .placeholder-center {
-    text-align: center;
-  }
+.placeholder-center {
+  text-align: center;
+}
 </style>
 
 <template>
