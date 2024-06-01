@@ -1,11 +1,11 @@
 <template>
   <div>
-    <div v-if="paginatedDocuments.length === 0" class="text-red-500 mt-4 ml-36 justify-center items-center">
+    <div v-if="documents.length === 0" class="text-red-500 mt-4 ml-36 justify-center items-center">
       Tidak ada dokumen yang cocok dengan kriteria pencarian.
     </div>
     <div v-else>
       <document-item
-        v-for="document in paginatedDocuments"
+        v-for="document in documents"
         :key="document.id"
         :document="document"
       />
@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import DocumentItem from './DocumentItem.vue'
+import DocumentItem from './DocumentItem.vue';
 
 export default {
   name: 'DocumentList',
