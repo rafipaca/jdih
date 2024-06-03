@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import DocView from '../views/DocView.vue'
+import CardDetailView from '../views/CardDetailView.vue'
 
 /* Tempat path kayak page2 dari website tarok disini */
 
@@ -24,8 +25,12 @@ const router = createRouter({
       path: '/dokumen',
       name: 'document',
       component: DocView
+    },
+    {
+      path: '/cardview',
+      name: 'detailcard',
+      component: CardDetailView
     }
-    
   ]
 })
 
