@@ -10,7 +10,7 @@
     <!-- Right section for the content (5/6 of the card) -->
     <div class="card-body justify-center w-5/6">
       <h2 class="card-title">{{ document.title }}</h2>
-      <p class="text-sm">{{ document.description }}</p>
+      <p class="text-sm">{{ truncatedDescription }}</p>
       <div class="absolute bottom-4 flex items-center space-x-4 text-gray-600 mb-2">
         <div class="flex items-center">
           <span class="material-icons">event</span>
@@ -26,7 +26,7 @@
         </div>
       </div>
       <div class="card-actions justify-end">
-        <button class="btn text-slate-50 bg-[#ffc067] shadow-lg hover:bg-white">Unduh</button>
+        <button @click.stop="handleDownload" class="btn text-slate-50 bg-[#ffc067] shadow-lg hover:bg-white">Unduh</button>
       </div>
     </div>
   </div>
@@ -41,9 +41,23 @@ export default {
       required: true
     }
   },
+  computed: {
+    truncatedDescription() {
+      const words = this.document.description.split(' ');
+      const maxWords = 30; // Change this value to set the limit of words
+      if (words.length > maxWords) {
+        return words.slice(0, maxWords).join(' ') + '...';
+      }
+      return this.document.description;
+    }
+  },
   methods: {
     handleClick() {
       this.$emit('card-click', this.document.id);
+    },
+    handleDownload() {
+      // Logika untuk mengunduh dokumen di sini
+      console.log('Download document', this.document.id);
     }
   }
 }
@@ -66,6 +80,7 @@ export default {
 
 .card {
   transition: background-color 0.3s ease;
+  cursor: pointer;
 }
 
 .card:hover .btn {

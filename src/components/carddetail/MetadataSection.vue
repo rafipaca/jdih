@@ -1,58 +1,58 @@
 <template>
   <div class="overflow-x-auto mb-4">
-    <table class="table table-zebra w-full">
+    <table class="table-auto w-full border border-white">
       <tbody>
         <tr>
-          <td class="w-1/2 border-r border-gray-300 text-center">Abstrak</td>
-          <td class="w-1/2 text-center">Abstrak</td>
+          <td class="w-1/2 border-r-2 border-b-2 border-white p-2 text-center bg-[#D4D4D4]">Abstrak</td>
+          <td class="w-1/2 border-b-2 border-white p-2 text-center bg-[#F6F6F6]">{{ document.abstrak }}</td>
         </tr>
         <tr>
-          <td class="w-1/2 border-r border-gray-300 text-center">Jenis Peraturan</td>
-          <td class="w-1/2 text-center">Keputusan Gubernur</td>
+          <td class="w-1/2 border-r-2 border-b-2 border-white p-2 text-center bg-[#E5E5E5]">Jenis Peraturan</td>
+          <td class="w-1/2 border-b-2 border-white p-2 text-center">{{ document.singkatan }}</td>
         </tr>
         <tr>
-          <td class="w-1/2 border-r border-gray-300 text-center">Judul</td>
-          <td class="w-1/2 text-center">KEPUTUSAN GUBERNUR Nomor 324 Tahun 2024</td>
+          <td class="w-1/2 border-r-2 border-b-2 border-white p-2 text-center bg-[#D4D4D4]">Judul</td>
+          <td class="w-1/2 border-b-2 border-white p-2 text-center bg-[#F6F6F6]">{{ document.title }}</td>
         </tr>
         <tr>
-          <td class="w-1/2 border-r border-gray-300 text-center">Tempat Penetapan</td>
-          <td class="w-1/2 text-center">LAMPUNG (INDONESIA), BIRO HUKUM</td>
+          <td class="w-1/2 border-r-2 border-b-2 border-white p-2 text-center bg-[#E5E5E5]">Tempat Penetapan</td>
+          <td class="w-1/2 border-b-2- border-white p-2 text-center">{{ document.teu }}</td>
         </tr>
         <tr>
-          <td class="w-1/2 border-r border-gray-300 text-center">Tgl Penetapan</td>
-          <td class="w-1/2 text-center">13 Des 2024</td>
+          <td class="w-1/2 border-r-2 border-b-2 border-white p-2 text-center bg-[#D4D4D4]">Tgl Penetapan</td>
+          <td class="w-1/2 border-b-2 border-white p-2 text-center bg-[#F6F6F6]">{{ document.date }} {{ document.month }} {{ document.year }}</td>
         </tr>
         <tr>
-          <td class="w-1/2 border-r border-gray-300 text-center">Tgl Pengundangan</td>
-          <td class="w-1/2 text-center">13 Des 2024</td>
+          <td class="w-1/2 border-r-2 border-b-2 border-white p-2 text-center bg-[#E5E5E5]">Tgl Pengundangan</td>
+          <td class="w-1/2 border-b-2 border-white p-2 text-center">{{ document.tglundang }}</td>
         </tr>
         <tr>
-          <td class="w-1/2 border-r border-gray-300 text-center">Subjek</td>
-          <td class="w-1/2 text-center">Penunjukan Atas Lampiran Keputusan Gubernur Lampung Nomor G/581/BKD/07/2024</td>
+          <td class="w-1/2 border-r-2 border-b-2 border-white p-2 text-center bg-[#D4D4D4]">Subjek</td>
+          <td class="w-1/2 border-b-2 border-white p-2 text-center bg-[#F6F6F6]">{{ document.subjek }}</td>
         </tr>
         <tr>
-          <td class="w-1/2 border-r border-gray-300 text-center">Status Produk Hukum</td>
-          <td class="w-1/2 text-center">Tidak Berlaku</td>
+          <td class="w-1/2 border-r-2 border-b-2 border-white p-2 text-center bg-[#E5E5E5]">Status Produk Hukum</td>
+          <td class="w-1/2 border-b-2 border-white p-2 text-center">{{ document.status }}</td>
         </tr>
         <tr>
-          <td class="w-1/2 border-r border-gray-300 text-center">Sumber</td>
-          <td class="w-1/2 text-center">Tidak ada sumber</td>
+          <td class="w-1/2 border-r-2 border-b-2 border-white p-2 text-center bg-[#D4D4D4]">Sumber</td>
+          <td class="w-1/2 border-b-2 border-white p-2 text-center bg-[#F6F6F6]">{{ document.sumber }}</td>
         </tr>
         <tr>
-          <td class="w-1/2 border-r border-gray-300 text-center">Tempat Terbit</td>
-          <td class="w-1/2 text-center">BIRO HUKUM 2024</td>
+          <td class="w-1/2 border-r-2 border-b-2 border-white p-2 text-center bg-[#E5E5E5]">Tempat Terbit</td>
+          <td class="w-1/2 border-b-2 border-white p-2 text-center">{{ document.tptterbit }}</td>
         </tr>
         <tr>
-          <td class="w-1/2 border-r border-gray-300 text-center ">Bidang Hukum</td>
-          <td class="w-1/2 text-center">Hukum Tata Negara</td>
+          <td class="w-1/2 border-r-2 border-b-2 border-white p-2 text-center bg-[#D4D4D4]">Bidang Hukum</td>
+          <td class="w-1/2 border-b-2 border-white p-2 text-center bg-[#F6F6F6]">{{ document.bidang }}</td>
         </tr>
         <tr>
-          <td class="w-1/2 border-r border-gray-300 text-center">Bahasa</td>
-          <td class="w-1/2 text-center">INDONESIA</td>
+          <td class="w-1/2 border-r-2 border-b-2 border-white p-2 text-center bg-[#E5E5E5]">Bahasa</td>
+          <td class="w-1/2 border-b-2 border-white p-2 text-center">{{ document.bahasa }}</td>
         </tr>
         <tr>
-          <td class="w-1/2 border-r border-gray-300 text-center">Lokasi</td>
-          <td class="w-1/2 text-center">Biro Hukum Provinsi Lampung</td>
+          <td class="w-1/2 border-r-2 border-white p-2 text-center bg-[#D4D4D4]">Lokasi</td>
+          <td class="w-1/2 border-white p-2 text-center bg-[#F6F6F6]">{{ document.lokasi }}</td>
         </tr>
       </tbody>
     </table>
@@ -61,7 +61,13 @@
 
 <script>
 export default {
-  name: 'MetadataSection'
+  name: 'MetadataSection',
+  props: {
+    document: {
+      type: Object,
+      required: true
+    }
+  }
 }
 </script>
 

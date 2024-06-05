@@ -2,8 +2,8 @@
   <div class="p-4">
     <div class="text-sm font-bold breadcrumbs">
       <ul>
-        <li><a>Documents</a></li>
-        <li></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/dokumen">Documents</a></li>
       </ul>
     </div>
     <DocumentFilter @search="handleSearch" />
