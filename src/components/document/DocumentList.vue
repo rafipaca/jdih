@@ -8,6 +8,7 @@
         v-for="document in documents"
         :key="document.id"
         :document="document"
+        @card-click="handleCardClick"
       />
     </div>
   </div>
@@ -35,11 +36,9 @@ export default {
       required: true
     }
   },
-  computed: {
-    paginatedDocuments() {
-      const startIndex = (this.currentPage - 1) * this.pageSize;
-      const endIndex = startIndex + this.pageSize;
-      return this.documents.slice(startIndex, endIndex);
+  methods: {
+    handleCardClick(id) {
+      this.$emit('card-click', id);
     }
   }
 }

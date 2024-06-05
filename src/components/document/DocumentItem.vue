@@ -1,5 +1,5 @@
 <template>
-  <div class="card card-side bg-base-100 border shadow-lg mb-4 h-52 pt-9 pb-9 hover:bg-[#9AD0C2] transition-colors duration-300">
+  <div @click="handleClick" class="card card-side bg-base-100 border shadow-lg mb-4 h-52 pt-9 pb-9 hover:bg-[#9AD0C2] transition-colors duration-300">
     <!-- Left section for the date and month (1/6 of the card) -->
     <div class="flex flex-col items-center justify-center text-center text-black w-1/6 rounded-l-lg border-r-2 border-[#006859]">
       <span class="text-5xl font-black text-[#004E43]">{{ document.date }}</span>
@@ -39,6 +39,11 @@ export default {
     document: {
       type: Object,
       required: true
+    }
+  },
+  methods: {
+    handleClick() {
+      this.$emit('card-click', this.document.id);
     }
   }
 }

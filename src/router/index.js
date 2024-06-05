@@ -3,8 +3,6 @@ import HomeView from '../views/HomeView.vue'
 import DocView from '../views/DocView.vue'
 import CardDetailView from '../views/CardDetailView.vue'
 
-/* Tempat path kayak page2 dari website tarok disini */
-
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -16,9 +14,6 @@ const router = createRouter({
     {
       path: '/about',
       name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () => import('../views/AboutView.vue')
     },
     {
@@ -27,7 +22,7 @@ const router = createRouter({
       component: DocView
     },
     {
-      path: '/cardview',
+      path: '/cardview/:id',
       name: 'detailcard',
       component: CardDetailView
     }

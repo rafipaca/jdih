@@ -15,6 +15,7 @@
           style="height: 55px;"
           @focus="handleFocus"
           @blur="handleBlur"
+          @keydown.enter="search"
         />
       </div>
       <!-- Bagian kedua untuk input "Nomor", "Tahun", dan tombol Temukan! -->
@@ -31,6 +32,7 @@
             style="height: 55px;"
             @focus="handleFocus"
             @blur="handleBlur"
+            @keydown.enter="search"
           />
         </div>
         <!-- Input "Tahun" -->
@@ -45,6 +47,7 @@
             style="height: 55px;"
             @focus="handleFocus"
             @blur="handleBlur"
+            @keydown.enter="search"
           />
         </div>
         <!-- Tombol "Temukan!" -->
