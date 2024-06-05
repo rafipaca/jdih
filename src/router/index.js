@@ -22,7 +22,7 @@ const router = createRouter({
       component: DocView
     },
     {
-      path: '/cardview/:id',
+      path: '/dokumen/cardview/:id',
       name: 'detailcard',
       component: CardDetailView
     }

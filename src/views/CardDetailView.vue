@@ -1,10 +1,19 @@
 <template>
   <div class="p-4">
-    <h1 class="text-2xl font-bold">{{ document.title }}</h1>
+    <div class="text-sm font-bold breadcrumbs">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/dokumen">Documents</a></li>
+        <li>{{ document.title }}</li>
+      </ul>
+    </div>
+    <h1 class="text-2xl font-bold my-4">{{ document.title }}</h1>
     <p>{{ document.description }}</p>
-    <p>Tahun: {{ document.year }}</p>
-    <p>Download: {{ document.downloads }}</p>
-    <p>Views: {{ document.views }}</p>
+    <div class="my-4">
+      <button class="btn btn-primary">Unduh Dokumen</button>
+    </div>
+    <MetadataSection :document="document" />
+    <RelatedDocuments :kategori="document.kategori" :currentDocumentId="document.id" />
   </div>
 </template>
 
@@ -12,6 +21,8 @@
 import { ref } from 'vue';
 import { useRoute } from 'vue-router';
 import { allDocuments } from '../components/data';
+import MetadataSection from '../components/carddetail/MetadataSection.vue';
+import RelatedDocuments from '../components/carddetail/RelatedDocuments.vue';
 
 const route = useRoute();
 const documentId = parseInt(route.params.id);
