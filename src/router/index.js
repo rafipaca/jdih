@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import DocView from '../views/DocView.vue'
 import CardDetailView from '../views/CardDetailView.vue'
+import FeedView from '../views/FeedView.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -25,6 +26,11 @@ const router = createRouter({
       path: '/dokumen/cardview/:id',
       name: 'detailcard',
       component: CardDetailView
+    },
+    {
+      path: '/feed',
+      name: 'Feed',
+      component: FeedView,
     }
   ]
 })
