@@ -1,24 +1,33 @@
 <template>
-    <div class="flex flex-col gap-4 p-4 bg-white shadow-lg rounded-lg">
-      <a href="#" class="font-semibold text-center">Visi & Misi</a>
+  <div class="flex flex-col gap-4 p-4 bg-white shadow-lg rounded-lg">
+    <ul class="list-none p-0 m-0">
+      <li @click="selectComponent('VisiMisi')" class="font-semibold text-center cursor-pointer mb-3 mt-3 hover:text-teal-500">Visi & Misi</li>
       <div class="border flex-col items-center justify-center border-teal-500 w-50"></div>
-      <a href="#" class="font-semibold text-center">Dasar Hukum</a>
+      <li @click="selectComponent('DasarHukum')" class="font-semibold text-center cursor-pointer mb-3 mt-3 hover:text-teal-500">Dasar Hukum</li>
       <div class="border flex-col items-center justify-center border-teal-500 w-50"></div>
-      <a href="#" class="font-semibold text-center">Latar Belakang</a>
+      <li @click="selectComponent('LatarBelakang')" class="font-semibold text-center cursor-pointer mb-3 mt-3 hover:text-teal-500">Latar Belakang</li>
       <div class="border flex-col items-center justify-center border-teal-500 w-50"></div>
-      <a href="#" class="font-semibold text-center">Struktur Organisasi</a>
+      <li @click="selectComponent('StrukturOrganisasi')" class="font-semibold text-center cursor-pointer mb-3 mt-3 hover:text-teal-500">Struktur Organisasi</li>
       <div class="border flex-col items-center justify-center border-teal-500 w-50"></div>
-      <a href="#" class="font-semibold text-center">SOP Pelayanan</a>
+      <li @click="selectComponent('SOPPelayanan')" class="font-semibold text-center cursor-pointer mb-3 mt-3 hover:text-teal-500">SOP Pelayanan</li>
       <div class="border flex-col items-center justify-center border-teal-500 w-50"></div>
-      <a href="#" class="font-semibold text-center">Tautan Lain</a>
+      <li @click="selectComponent('TautanLain')" class="font-semibold text-center cursor-pointer mb-3 mt-3 hover:text-teal-500">Tautan Lain</li>
       <div class="border flex-col items-center justify-center border-teal-500 w-50"></div>
-      <a href="#" class="font-semibold text-center">Kontak</a>
-    </div>
-  </template>
-  
-  <script>
-  export default {
-    name: 'SidebarAbout',
-  };
-  </script>
-  
+      <li @click="selectComponent('Kontak')" class="font-semibold text-center cursor-pointer mb-3 mt-3 hover:text-teal-500">Kontak</li>
+    </ul>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'SidebarAbout',
+  methods: {
+    selectComponent(componentName) {
+      this.$emit('changeContent', componentName);
+    },
+  },
+};
+</script>
+
+<style scoped>
+</style>
