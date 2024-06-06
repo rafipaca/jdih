@@ -1,11 +1,11 @@
 <template>
   <div class="p-4 mt-8">
-    <div class="text-sm font-bold flex justify-center">
+    <div class="text-sm italic font-light flex justify-center text-[#2D9596]">
       <ul class="flex items-center">
         <li v-for="(crumb, index) in breadcrumbs" :key="index" class="flex items-center">
           <a v-if="crumb.url" :href="crumb.url">{{ crumb.text }}</a>
           <span v-else>{{ crumb.text }}</span>
-          <span v-if="index < breadcrumbs.length - 1" class="mx-2">/</span>
+          <span v-if="index < breadcrumbs.length" class="mx-1">/</span>
         </li>
       </ul>
     </div>
@@ -24,7 +24,9 @@
     <div>
       <RelatedDocuments :kategori="document.kategori" :currentDocumentId="document.id" />
     </div>
-    
+    <div class="text-center mt-8">
+      <a href="/dokumen" class="btn text-slate-50 bg-[#006859] shadow-lg hover:bg-white">Kembali</a>
+    </div>
   </div>
 </template>
 
@@ -46,9 +48,7 @@ watch(() => route.params.id, (newId) => {
 
 // Define breadcrumbs
 const breadcrumbs = ref([
-  { text: 'Home', url: '/' },
-  { text: 'Documents', url: '/dokumen' },
-  { text: document.value.title }
+  { text: 'Documents', url: '/dokumen' }
 ]);
 </script>
 

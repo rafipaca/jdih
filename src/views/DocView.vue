@@ -1,9 +1,12 @@
 <template>
   <div class="p-4">
-    <div class="text-sm font-bold breadcrumbs">
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/dokumen">Documents</a></li>
+    <div class="text-sm italic font-light flex justify-left mb-5 text-[#2D9596]">
+      <ul class="flex">
+        <li v-for="(crumb, index) in breadcrumbs" :key="index" class="flex items-center ">
+          <a v-if="crumb.url" :href="crumb.url">{{ crumb.text }}</a>
+          <span v-else>{{ crumb.text }}</span>
+          <span v-if="index < breadcrumbs.length" class="mx-2">/</span>
+        </li>
       </ul>
     </div>
     <DocumentFilter @search="handleSearch" />
@@ -32,7 +35,9 @@ const filteredDocuments = ref([...allDocuments.value]);
 const currentPage = ref(1);
 const pageSize = 5; 
 const router = useRouter();
-
+const breadcrumbs = ref([
+  { text: 'Documents', url: '/dokumen' }
+]);
 const availableFilters = ref([
   {
     name: 'kategori',

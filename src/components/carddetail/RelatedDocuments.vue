@@ -1,9 +1,9 @@
 <template>
   <div class="border border-teal-500 w-[40%] mx-auto mb-12 mt-20"></div>
   <div class="related-documents">
-    <h2 class="text-xl font-bold mb-2 text-center mb-8">Produk Hukum Serupa</h2>
+    <h2 class="text-xl font-bold text-center mb-8">Produk Hukum Serupa</h2>
     <div
-      v-for="(doc, index) in limitedDocuments"
+      v-for="(doc) in limitedDocuments"
       :key="doc.id"
       class="card card-side bg-base-100 border shadow-lg mb-4 h-52 pt-9 pb-9 hover:bg-[#9AD0C2] mx-40 transition-colors duration-300 cursor-pointer"
       @click="handleClick(doc.id)"
@@ -36,9 +36,6 @@
           <button @click.stop="handleDownload" class="btn text-slate-50 bg-[#ffc067] shadow-lg hover:bg-white">Unduh</button>
         </div>
       </div>
-    </div>
-    <div class="text-center mt-8">
-      <button @click="handleBack" class="btn text-slate-50 bg-[#006859] shadow-lg  hover:bg-white">Kembali</button>
     </div>
   </div>
 </template>
@@ -73,9 +70,6 @@ const handleClick = (id) => {
   router.push({ name: 'detailcard', params: { id } });
 };
 
-const handleBack = () => {
-  router.push({ name: 'documents' });
-};
 
 const truncate = (text, maxWords = 30) => {
   const words = text.split(' ');

@@ -1,8 +1,8 @@
 <template>
   <div class="mb-4 w-full">
-    <h2 class="text-2xl font-bold">Cari dokumen hukum!</h2>
-    <div class="border border-teal-500 w-20"></div>
-    <div class="flex space-x-2 mt-4 w-full">
+    <h2 class="text-2xl font-bold mb-2">Cari dokumen hukum!</h2>
+    <div class="border-2 border-[#006859] w-20 "></div>
+    <div class="flex space-x-2 mt-8 w-full">
       <!-- Bagian pertama untuk input "Judul" -->
       <div class="relative flex items-center w-1/2">
         <img src="@/assets/book.png" alt="Icon" class="absolute left-0 w-5 h-5 ml-4" />
@@ -56,6 +56,11 @@
         </div>
       </div>
     </div>
+    <!-- Buat logika dimana hasil dari filter atau hasil dari pencarian biasa itu menemukan ada berapa count data static pake JS -->
+    <div class="my-6 text-sm">
+      <p>Menampilkan  10.918 hasil temuan (0,25 seconds)</p> 
+    </div>
+    
     <!-- Error message -->
     <div v-if="showErrorMessage" class="text-red-500 mt-6 ml-52 flex justify-center items-center h-10">
       Tidak ada hasil yang ditemukan.
