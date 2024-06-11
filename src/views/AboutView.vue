@@ -15,31 +15,31 @@
 </template>
 
 <script>
-import { ref } from 'vue';
-import Sidebar from '../components/about/SidebarAbout.vue';
-import VisiMisi from '../components/about/VisiMisi.vue';
-import DasarHukum from '../components/about/DasarHukum.vue';
+import { ref } from 'vue'
+import Sidebar from '../components/about/SidebarAbout.vue'
+import VisiMisi from '../components/about/VisiMisi.vue'
+import DasarHukum from '../components/about/DasarHukum.vue'
 
 export default {
   name: 'AboutView',
   components: {
     Sidebar,
     VisiMisi,
-    DasarHukum,
+    DasarHukum
   },
   setup() {
-    const currentComponent = ref('VisiMisi');
+    const currentComponent = ref('VisiMisi')
 
     const changeContent = (componentName) => {
-      currentComponent.value = componentName;
-    };
+      currentComponent.value = componentName
+    }
 
     return {
       currentComponent,
-      changeContent,
-    };
-  },
-};
+      changeContent
+    }
+  }
+}
 </script>
 
 <style scoped>

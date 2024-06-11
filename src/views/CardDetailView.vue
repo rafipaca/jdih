@@ -10,7 +10,9 @@
       </ul>
     </div>
     <h1 class="text-center text-2xl font-bold mb-2 mt-4">{{ document.title }}</h1>
-    <h2 class="italic text-center text-sm mb-2">dirilis pada {{ document.date }} {{ document.month }} {{ document.year }}</h2>
+    <h2 class="italic text-center text-sm mb-2">
+      dirilis pada {{ document.date }} {{ document.month }} {{ document.year }}
+    </h2>
     <p class="text-center ml-25 mr-25 mt-10">{{ document.description }}</p>
     <div class="mt-20 text-center">
       <button class="bg-[#006859] btn text-white">unduh dokumen</button>
@@ -31,25 +33,26 @@
 </template>
 
 <script setup>
-import { ref, computed, watch } from 'vue';
-import { useRoute } from 'vue-router';
-import { allDocuments } from '../components/data';
-import MetadataSection from '../components/carddetail/MetadataSection.vue';
-import RelatedDocuments from '../components/carddetail/RelatedDocuments.vue';
+import { ref, computed, watch } from 'vue'
+import { useRoute } from 'vue-router'
+import { allDocuments } from '../components/data'
+import MetadataSection from '../components/carddetail/MetadataSection.vue'
+import RelatedDocuments from '../components/carddetail/RelatedDocuments.vue'
 
-const route = useRoute();
-const documentId = ref(parseInt(route.params.id));
-const document = computed(() => allDocuments.value.find(doc => doc.id === documentId.value));
+const route = useRoute()
+const documentId = ref(parseInt(route.params.id))
+const document = computed(() => allDocuments.value.find((doc) => doc.id === documentId.value))
 
 // Watch for changes in route.params.id
-watch(() => route.params.id, (newId) => {
-  documentId.value = parseInt(newId);
-});
+watch(
+  () => route.params.id,
+  (newId) => {
+    documentId.value = parseInt(newId)
+  }
+)
 
 // Define breadcrumbs
-const breadcrumbs = ref([
-  { text: 'Documents', url: '/dokumen' }
-]);
+const breadcrumbs = ref([{ text: 'Documents', url: '/dokumen' }])
 </script>
 
 <style scoped>
