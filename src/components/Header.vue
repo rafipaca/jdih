@@ -20,7 +20,7 @@
           >Dokumen</a
         >
         <a
-          href="#"
+          href="/feed"
           class="hover:text-gray-300 text-base font-medium"
           style="font-size: 16px; margin-right: 35px"
           >Feed</a
