@@ -38,6 +38,7 @@ export default {
 <style scoped>
 .pagination-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
   margin-top: 20px;
@@ -65,5 +66,20 @@ export default {
 
 .pagination-item.btn-active {
   background-color: #ff7f50;
+}
+
+/* Responsive styling */
+@media (max-width: 640px) {
+  .pagination-item {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pagination-item {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
 }
 </style>

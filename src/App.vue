@@ -11,7 +11,7 @@ import Footer from './components/Footer.vue'
   <!-- Navbar -->
   <Header />
   <!-- Router view digunakan untuk memberikan content secara full  -->
-  <RouterView class="w-[70%] mx-auto" />
+  <RouterView class="mx-auto" />
   <!-- Footer -->
   <Footer />
 </template>

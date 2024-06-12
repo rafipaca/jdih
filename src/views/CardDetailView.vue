@@ -1,5 +1,5 @@
 <template>
-  <div class="p-4 mt-8">
+  <div class="p-4 mt-8 w-[70%]">
     <div class="text-sm italic font-light flex justify-center text-[#2D9596]">
       <ul class="flex items-center">
         <li v-for="(crumb, index) in breadcrumbs" :key="index" class="flex items-center">

@@ -1,5 +1,5 @@
 <template>
-  <div class="p-4">
+  <div class="p-4 w-full lg:w-[70%] mx-auto">
     <div class="text-sm italic font-light flex justify-left mb-5 text-[#2D9596]">
       <ul class="flex">
         <li v-for="(crumb, index) in breadcrumbs" :key="index" class="flex items-center">
@@ -10,15 +10,15 @@
       </ul>
     </div>
     <DocumentFilter @search="handleSearch" :resultCount="resultCount" :searchTime="searchTime" />
-    <div class="flex">
+    <div class="flex flex-col lg:flex-row">
       <!-- Section 1: Sidebar Checkbox -->
       <SidebarCheckbox
-        class="w-1/4"
+        class="w-full lg:w-1/4 mb-4 lg:mb-0"
         :filters="availableFilters"
         @filter-change="handleFilterChange"
       />
       <!-- Section 2: Document Filter and List -->
-      <div class="w-3/4">
+      <div class="w-full lg:w-3/4">
         <DocumentList
           :documents="paginatedDocuments"
           :currentPage="currentPage"

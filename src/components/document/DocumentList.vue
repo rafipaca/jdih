@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import DocumentItem from './DocumentItem.vue'
+import DocumentItem from './DocumentItem.vue';
 
 export default {
   name: 'DocumentList',
@@ -38,7 +38,7 @@ export default {
   },
   methods: {
     handleCardClick(id) {
-      this.$emit('card-click', id)
+      this.$emit('card-click', id);
     }
   }
 }

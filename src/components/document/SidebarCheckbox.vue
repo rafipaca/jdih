@@ -14,9 +14,7 @@
           :checked="isChecked(filter.name, option.value)"
           @change="updateFilters(filter.name, option.value)"
         />
-        <label :for="`${filter.name}-${option.value}`" class="text-sm ml-1">{{
-          option.label
-        }}</label>
+        <label :for="`${filter.name}-${option.value}`" class="text-sm ml-1">{{ option.label }}</label>
       </div>
     </div>
   </div>
@@ -78,11 +76,9 @@ export default {
     }
   }
 }
-
 </script>
 
 <style scoped>
-/* Tambahkan gaya sesuai kebutuhan */
 .sidebar-checkbox {
   padding: 1rem;
 }
