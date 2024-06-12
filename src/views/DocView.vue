@@ -9,7 +9,7 @@
         </li>
       </ul>
     </div>
-    <DocumentFilter @search="handleSearch" />
+    <DocumentFilter @search="handleSearch" :resultCount="resultCount" :searchTime="searchTime" />
     <div class="flex">
       <!-- Section 1: Sidebar Checkbox -->
       <SidebarCheckbox
@@ -36,19 +36,22 @@
 </template>
 
 <script setup>
-import DocumentFilter from '../components/document/DocumentFilter.vue'
-import DocumentList from '../components/document/DocumentList.vue'
-import SidebarCheckbox from '../components/document/SidebarCheckbox.vue'
-import Pagination from '../components/document/Pagination.vue'
-import { ref, computed } from 'vue'
-import { allDocuments } from '../components/data'
-import { useRouter } from 'vue-router'
+import { ref, computed, onMounted } from 'vue';
+import { useRouter } from 'vue-router';
+import DocumentFilter from '../components/document/DocumentFilter.vue';
+import DocumentList from '../components/document/DocumentList.vue';
+import SidebarCheckbox from '../components/document/SidebarCheckbox.vue';
+import Pagination from '../components/document/Pagination.vue';
+import { allDocuments } from '../components/data';
 
-const filteredDocuments = ref([...allDocuments.value])
-const currentPage = ref(1)
-const pageSize = 5
-const router = useRouter()
-const breadcrumbs = ref([{ text: 'Documents', url: '/dokumen' }])
+const filteredDocuments = ref([...allDocuments.value]);
+const currentPage = ref(1);
+const pageSize = 5; 
+const router = useRouter();
+const breadcrumbs = ref([
+  { text: 'Documents', url: '/dokumen' }
+]);
+
 const availableFilters = ref([
   {
     name: 'kategori',
@@ -74,7 +77,10 @@ const availableFilters = ref([
     ]
   }
   // Tambahkan filter lain jika diperlukan...
-])
+]);
+
+const resultCount = ref(0); // New
+const searchTime = ref(0);  // New
 
 const paginatedDocuments = computed(() => {
   const startIndex = (currentPage.value - 1) * pageSize
@@ -85,19 +91,25 @@ const paginatedDocuments = computed(() => {
 const totalPages = computed(() => Math.ceil(filteredDocuments.value.length / pageSize))
 
 const handleSearch = (searchTerms) => {
-  const titleKeywords = searchTerms.title ? searchTerms.title.toLowerCase().split(' ') : []
+  const startTime = performance.now(); // Start timing the search
+  const titleKeywords = searchTerms.title ? searchTerms.title.toLowerCase().split(' ') : [];
 
-  filteredDocuments.value = allDocuments.value.filter((doc) => {
-    const matchesTitle =
-      !searchTerms.title ||
-      titleKeywords.every((keyword) => doc.title.toLowerCase().includes(keyword))
-    const matchesNumber = !searchTerms.number || doc.number === parseInt(searchTerms.number)
-    const matchesYear = !searchTerms.year || doc.year === parseInt(searchTerms.year)
-    return matchesTitle && matchesNumber && matchesYear
-  })
-}
+  filteredDocuments.value = allDocuments.value.filter(doc => {
+    const matchesTitle = !searchTerms.title || titleKeywords.every(keyword => doc.title.toLowerCase().includes(keyword));
+    const matchesNumber = !searchTerms.number || doc.number === parseInt(searchTerms.number);
+    const matchesYear = !searchTerms.year || doc.year === parseInt(searchTerms.year);
+    return matchesTitle && matchesNumber && matchesYear;
+  });
+
+  const endTime = performance.now(); // End timing the search
+  searchTime.value = ((endTime - startTime) / 1000).toFixed(2); // Calculate time in seconds
+  resultCount.value = filteredDocuments.value.length; // Update result count
+  currentPage.value = 1; // Reset to the first page after search
+};
 
 const handleFilterChange = (selectedFilters) => {
+  const startTime = performance.now(); // Start timing the search
+
   if (selectedFilters.kategori.includes('all')) {
     filteredDocuments.value = [...allDocuments.value]
   } else {
@@ -107,18 +119,22 @@ const handleFilterChange = (selectedFilters) => {
       return matchesKategori
     })
   }
-  currentPage.value = 1 // Reset to the first page after filtering
-}
+  
+  const endTime = performance.now(); // End timing the search
+  searchTime.value = ((endTime - startTime) / 1000).toFixed(2); // Calculate time in seconds
+  resultCount.value = filteredDocuments.value.length; // Update result count
+  currentPage.value = 1; // Reset to the first page after filtering
+};
 
 const handlePageChange = (page) => {
   currentPage.value = page
 }
 
 const goToDetail = (id) => {
-  router.push({ name: 'detailcard', params: { id } })
-}
-</script>
+  router.push({ name: 'detailcard', params: { id } });
+};
 
-<style scoped>
-/* Tambahkan gaya sesuai kebutuhan */
-</style>
+onMounted(() => {
+  handleFilterChange({ kategori: [] }); // Initialize with default filters
+});
+</script>

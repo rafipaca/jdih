@@ -62,24 +62,26 @@
         </div>
       </div>
     </div>
-    <!-- Buat logika dimana hasil dari filter atau hasil dari pencarian biasa itu menemukan ada berapa count data static pake JS -->
+    <!-- Tampilkan jumlah hasil dan waktu pencarian -->
     <div class="my-6 text-sm">
-      <p>Menampilkan 10.918 hasil temuan (0,25 seconds)</p>
-    </div>
-
-    <!-- Error message -->
-    <div
-      v-if="showErrorMessage"
-      class="text-red-500 mt-6 ml-52 flex justify-center items-center h-10"
-    >
-      Tidak ada hasil yang ditemukan.
-    </div>
+      <p>Menampilkan {{ resultCount }} hasil temuan ({{ searchTime }} detik)</p> 
+    </div>  
   </div>
 </template>
 
 <script>
 export default {
   name: 'DocumentFilter',
+  props: {
+    resultCount: {
+      type: Number,
+      required: true
+    },
+    searchTime: {
+      type: Number,
+      required: true
+    }
+  },
   data() {
     return {
       searchTerms: {
@@ -87,7 +89,7 @@ export default {
         number: '',
         year: ''
       },
-      showErrorMessage: false // Flag to control error message visibility
+      showErrorMessage: false
     }
   },
   methods: {
@@ -106,9 +108,12 @@ export default {
       }
     },
     search() {
-      this.$emit('search', this.searchTerms)
-      // Show error message by default
-      this.showErrorMessage = this.filteredDocuments.length === 0
+      this.$emit('search', this.searchTerms);
+    }
+  },
+  watch: {
+    resultCount(newCount) {
+      this.showErrorMessage = newCount === 0;
     }
   }
 }
