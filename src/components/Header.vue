@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-[#006859] text-white p-4">
+  <header class="bg-primary text-white p-4">
     <div class="container mx-auto flex justify-between items-center">
       <div class="flex items-center space-x-2">
         <a href="/">

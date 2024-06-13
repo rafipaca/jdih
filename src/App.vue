@@ -2,7 +2,7 @@
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 import Header from './components/Header.vue'
-import Footer from './components/Footer.vue'
+import FooterNew from './components/FooterNew.vue'
 </script>
 
 <!-- Disini tuh tempat buat yang elemen static kayak navbar, footer -->
@@ -11,9 +11,9 @@ import Footer from './components/Footer.vue'
   <!-- Navbar -->
   <Header />
   <!-- Router view digunakan untuk memberikan content secara full  -->
-  <RouterView class="w-[70%] mx-auto" />
+  <RouterView class=" mx-auto" />
   <!-- Footer -->
-  <Footer />
+  <FooterNew />
 </template>
 
 <style scoped>
