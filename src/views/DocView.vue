@@ -1,38 +1,40 @@
 <template>
-  <div class="p-4 w-full lg:w-[70%] mx-auto">
-    <div class="text-sm italic font-light flex justify-left mb-5 text-[#2D9596]">
-      <ul class="flex">
-        <li v-for="(crumb, index) in breadcrumbs" :key="index" class="flex items-center">
-          <a v-if="crumb.url" :href="crumb.url">{{ crumb.text }}</a>
-          <span v-else>{{ crumb.text }}</span>
-          <span v-if="index < breadcrumbs.length" class="mx-2">/</span>
-        </li>
-      </ul>
-    </div>
-    <DocumentFilter @search="handleSearch" :resultCount="resultCount" :searchTime="searchTime" />
-    <div class="flex flex-col lg:flex-row">
-      <!-- Section 1: Sidebar Checkbox -->
-      <SidebarCheckbox
-        class="w-full lg:w-1/4 mb-4 lg:mb-0"
-        :filters="availableFilters"
-        @filter-change="handleFilterChange"
-      />
-      <!-- Section 2: Document Filter and List -->
-      <div class="w-full lg:w-3/4">
-        <DocumentList
-          :documents="paginatedDocuments"
-          :currentPage="currentPage"
-          :pageSize="pageSize"
-          @card-click="goToDetail"
+  <DecorContainer>
+    <div class="content p-4 w-full lg:w-[70%] mx-auto">
+      <div class="text-sm italic font-light flex justify-left mb-5 text-[#2D9596]">
+        <ul class="flex">
+          <li v-for="(crumb, index) in breadcrumbs" :key="index" class="flex items-center">
+            <a v-if="crumb.url" :href="crumb.url">{{ crumb.text }}</a>
+            <span v-else>{{ crumb.text }}</span>
+            <span v-if="index < breadcrumbs.length" class="mx-2">/</span>
+          </li>
+        </ul>
+      </div>
+      <DocumentFilter @search="handleSearch" :resultCount="resultCount" :searchTime="searchTime" />
+      <div class="flex flex-col lg:flex-row">
+        <!-- Section 1: Sidebar Checkbox -->
+        <SidebarCheckbox
+          class="w-full lg:w-1/4 mb-4 lg:mb-0"
+          :filters="availableFilters"
+          @filter-change="handleFilterChange"
         />
-        <Pagination
-          @page-change="handlePageChange"
-          :totalPages="totalPages"
-          :currentPage="currentPage"
-        />
+        <!-- Section 2: Document Filter and List -->
+        <div class="w-full lg:w-3/4">
+          <DocumentList
+            :documents="paginatedDocuments"
+            :currentPage="currentPage"
+            :pageSize="pageSize"
+            @card-click="goToDetail"
+          />
+          <Pagination
+            @page-change="handlePageChange"
+            :totalPages="totalPages"
+            :currentPage="currentPage"
+          />
+        </div>
       </div>
     </div>
-  </div>
+  </DecorContainer>
 </template>
 
 <script setup>
@@ -42,6 +44,7 @@ import DocumentFilter from '../components/document/DocumentFilter.vue';
 import DocumentList from '../components/document/DocumentList.vue';
 import SidebarCheckbox from '../components/document/SidebarCheckbox.vue';
 import Pagination from '../components/document/Pagination.vue';
+import DecorContainer from '../components/DecorContainer.vue';
 import { allDocuments } from '../components/data';
 
 const filteredDocuments = ref([...allDocuments.value]);
