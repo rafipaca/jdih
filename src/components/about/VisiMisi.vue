@@ -1,10 +1,7 @@
 <template>
-  <div class="flex flex-col gap-4 p-4 bg-white shadow-lg rounded-lg">
+  <div class="flex flex-col p-4 bg-white rounded-lg custom-shadow">
     <!-- Visi Section -->
     <div class="relative my-4">
-      <svg class="absolute inset-0 w-full h-full" viewBox="0 0 1130 87" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="1" y="1" width="1128" height="85" rx="9" fill="white" stroke="#E5E5E5" stroke-width="2"/>
-      </svg>
       <div class="relative p-4 flex justify-center items-center flex-col">
         <div class="absolute -top-4 bg-white px-2">
           <h2 class="text-2xl font-semibold text-center text-teal-500 mt-2">Visi</h2>
@@ -15,9 +12,6 @@
 
     <!-- Misi Section -->
     <div class="relative my-4">
-      <svg class="absolute inset-0 w-full h-full" viewBox="0 0 1130 87" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="1" y="1" width="1128" height="85" rx="9" fill="white" stroke="#E5E5E5" stroke-width="2"/>
-      </svg>
       <div class="relative p-4 flex justify-center items-center flex-col">
         <div class="absolute -top-4 bg-white px-2">
           <h2 class="text-2xl font-semibold text-center text-teal-500">Misi</h2>
@@ -25,9 +19,18 @@
         <ol class="list-decimal pl-5 mt-4">
           <li>Meningkatkan Pembangunan Ekonomi dan Memperkuat Kemandirian Daerah</li>
           <li>Meningkatkan Infrastruktur Untuk Pengembangan Ekonomi dan Pelayanan Sosial</li>
-          <li>Meningkatkan Kualitas Pendidikan, Kesehatan, Budaya Masyarakat, dan Toleransi Kehidupan Beragama</li>
-          <li>Meningkatkan Pelestarian Sumber Daya Alam dan Kualitas Lingkungan Hidup Yang Berkelanjutan</li>
-          <li>Menegakkan Supremasi Hukum, Membangun Peradaban Demokrasi dan Meningkatkan Tata kelola Pemerintahan Yang Baik Serta Meningkatkan Kompetensi dan Profesionalisme ASN</li>
+          <li>
+            Meningkatkan Kualitas Pendidikan, Kesehatan, Budaya Masyarakat, dan Toleransi Kehidupan
+            Beragama
+          </li>
+          <li>
+            Meningkatkan Pelestarian Sumber Daya Alam dan Kualitas Lingkungan Hidup Yang
+            Berkelanjutan
+          </li>
+          <li>
+            Menegakkan Supremasi Hukum, Membangun Peradaban Demokrasi dan Meningkatkan Tata kelola
+            Pemerintahan Yang Baik Serta Meningkatkan Kompetensi dan Profesionalisme ASN
+          </li>
         </ol>
       </div>
     </div>
@@ -36,8 +39,8 @@
 
 <script>
 export default {
-  name: 'VisiMisi',
-};
+  name: 'VisiMisi'
+}
 </script>
 
 <style scoped>
@@ -61,4 +64,10 @@ export default {
 .absolute .bg-white {
   background-color: white;
 }
+
+
+.custom-shadow {
+    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+  }
+  
 </style>

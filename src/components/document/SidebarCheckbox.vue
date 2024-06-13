@@ -1,7 +1,7 @@
 <template>
   <div>
     <h3 class="font-bold mb-2">Kategori</h3>
-    <div class="filter-group " v-for="filter in filters" :key="filter.name">
+    <div class="filter-group" v-for="filter in filters" :key="filter.name">
       <div @click="clickShowAll()">
         <input type="checkbox" value="tes" :checked="isShowAll" />
         <label class="text-sm ml-1" for="showall">Tampilkan Semua</label>
@@ -14,7 +14,7 @@
           :checked="isChecked(filter.name, option.value)"
           @change="updateFilters(filter.name, option.value)"
         />
-        <label :for="`${filter.name}-${option.value}`" class="text-sm ml-1" >{{ option.label }}</label>
+        <label :for="`${filter.name}-${option.value}`" class="text-sm ml-1">{{ option.label }}</label>
       </div>
     </div>
   </div>
@@ -79,7 +79,6 @@ export default {
 </script>
 
 <style scoped>
-/* Tambahkan gaya sesuai kebutuhan */
 .sidebar-checkbox {
   padding: 1rem;
 }

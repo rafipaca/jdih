@@ -1,7 +1,12 @@
 <template>
-  <div @click="handleClick" class="card card-side bg-base-100 border shadow-lg mb-4 h-52 pt-9 pb-9 hover:bg-[#9AD0C2] transition-colors duration-300">
+  <div
+    @click="handleClick"
+    class="card card-side bg-base-100 border shadow-lg mb-4 h-52 pt-9 pb-9 hover:bg-[#9AD0C2] transition-colors duration-300"
+  >
     <!-- Left section for the date and month (1/6 of the card) -->
-    <div class="flex flex-col items-center justify-center text-center text-black w-1/6 rounded-l-lg border-r-2 border-[#006859]">
+    <div
+      class="flex flex-col items-center justify-center text-center text-black w-1/6 rounded-l-lg border-r-2 border-[#006859]"
+    >
       <span class="text-5xl font-black text-[#004E43]">{{ document.date }}</span>
       <div class="rounded-lg bg-[#006859] mt-4 p-1 pr-4 pl-4">
         <span class="text-sm text-white">{{ document.month }}</span>
@@ -26,7 +31,12 @@
         </div>
       </div>
       <div class="card-actions justify-end">
-        <button @click.stop="handleDownload" class="btn text-slate-50 bg-[#ffc067] shadow-lg hover:bg-white">Unduh</button>
+        <button
+          @click.stop="handleDownload"
+          class="btn text-slate-50 bg-[#ffc067] shadow-lg hover:bg-white"
+        >
+          Unduh
+        </button>
       </div>
     </div>
   </div>
@@ -43,21 +53,21 @@ export default {
   },
   computed: {
     truncatedDescription() {
-      const words = this.document.description.split(' ');
-      const maxWords = 30; // Change this value to set the limit of words
+      const words = this.document.description.split(' ')
+      const maxWords = 30 // Change this value to set the limit of words
       if (words.length > maxWords) {
-        return words.slice(0, maxWords).join(' ') + '...';
+        return words.slice(0, maxWords).join(' ') + '...'
       }
-      return this.document.description;
+      return this.document.description
     }
   },
   methods: {
     handleClick() {
-      this.$emit('card-click', this.document.id);
+      this.$emit('card-click', this.document.id)
     },
     handleDownload() {
       // Logika untuk mengunduh dokumen di sini
-      console.log('Download document', this.document.id);
+      console.log('Download document', this.document.id)
     }
   }
 }
@@ -86,6 +96,8 @@ export default {
 .card:hover .btn {
   background-color: white;
   color: black;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 </style>
