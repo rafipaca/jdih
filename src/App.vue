@@ -11,11 +11,7 @@ import FooterNew from './components/FooterNew.vue'
   <!-- Navbar -->
   <Header />
   <!-- Router view digunakan untuk memberikan content secara full  -->
-<<<<<<< HEAD
-  <RouterView class=" mx-auto" />
-=======
   <RouterView class="mx-auto" />
->>>>>>> e789bfa87ee2e6d550c85e7728d4589a6e04255d
   <!-- Footer -->
   <FooterNew />
 </template>
