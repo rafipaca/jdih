@@ -23,9 +23,15 @@
           <img class="mt-10 hover:scale-110" src="@/assets/down-arrow.png" alt="">
         </div>
       </div>
-      <div class="flex-auto h-full bg-black bg-fixed hidden sm:block" :style="{ backgroundImage: `url(${require('@/assets/home-hero-5.png')})` }">
+      <div class="flex-auto h-full bg-black bg-fixed hidden sm:block" :style="{ backgroundImage: `url(${homeHero5})` }">
       </div>
     </div>
   </template>
   
+  <script setup>
+  import homeHero5 from '../../assets/home-hero-5.png'
+  </script>
   
+  <style scoped>
+  /* Tambahkan gaya sesuai kebutuhan */
+  </style>
