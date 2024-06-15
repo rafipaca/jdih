@@ -30,16 +30,16 @@
 </template>
 
 <script>
-import { ref } from 'vue';
-import Sidebar from '../components/about/SidebarAbout.vue';
-import VisiMisi from '../components/about/VisiMisi.vue';
-import DasarHukum from '../components/about/DasarHukum.vue';
-import LatarBelakang from '../components/about/LatarBelakang.vue';
-import StrukturOrganisasi from '../components/about/StrukturOrganisasi.vue';
-import SopPelayanan from '../components/about/SopPelayanan.vue';
-import TautanLain from '../components/about/TautanLain.vue';
-import KontakKami from '../components/about/KontakKami.vue';
-import DecorContainer from '../components/DecorContainer.vue';
+import { ref } from 'vue'
+import Sidebar from '../components/about/SidebarAbout.vue'
+import VisiMisi from '../components/about/VisiMisi.vue'
+import DasarHukum from '../components/about/DasarHukum.vue'
+import LatarBelakang from '../components/about/LatarBelakang.vue'
+import StrukturOrganisasi from '../components/about/StrukturOrganisasi.vue'
+import SopPelayanan from '../components/about/SopPelayanan.vue'
+import TautanLain from '../components/about/TautanLain.vue'
+import KontakKami from '../components/about/KontakKami.vue'
+import DecorContainer from '../components/DecorContainer.vue'
 
 export default {
   name: 'AboutView',
@@ -52,19 +52,16 @@ export default {
     SopPelayanan,
     TautanLain,
     KontakKami,
-    DecorContainer,
+    DecorContainer
   },
   setup() {
-    const currentComponent = ref('VisiMisi');
-    const breadcrumbs = ref([
-      { text: 'Tentang', url: '/about' },
-      { text: 'Visi Misi' }
-    ]);
+    const currentComponent = ref('VisiMisi')
+    const breadcrumbs = ref([{ text: 'Tentang', url: '/about' }, { text: 'Visi Misi' }])
 
     const changeContent = (componentName) => {
-      currentComponent.value = componentName;
-      updateBreadcrumbs(componentName);
-    };
+      currentComponent.value = componentName
+      updateBreadcrumbs(componentName)
+    }
 
     const updateBreadcrumbs = (componentName) => {
       const breadcrumbMap = {
@@ -75,24 +72,26 @@ export default {
         SopPelayanan: 'SOP Pelayanan',
         TautanLain: 'Tautan Lain',
         KontakKami: 'Kontak'
-      };
+      }
       breadcrumbs.value = [
         { text: 'Tentang', url: '/about' },
         { text: breadcrumbMap[componentName] }
-      ];
-    };
+      ]
+    }
 
     return {
       currentComponent,
       changeContent,
-      breadcrumbs,
-    };
-  },
-};
+      breadcrumbs
+    }
+  }
+}
 </script>
 
 <style scoped>
 .custom-shadow {
-  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+  box-shadow:
+    0 1px 20px rgba(0, 0, 0, 0.1),
+    0 2px 4px rgba(0, 0, 0, 0.06);
 }
 </style>
