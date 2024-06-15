@@ -97,48 +97,44 @@ const totalPages = computed(() => Math.ceil(filteredDocuments.value.length / pag
 
 const handleSearch = (searchTerms) => {
   isLoading.value = true // Start loading
-  setTimeout(() => {
-    const startTime = performance.now() // Start timing the search
-    const titleKeywords = searchTerms.title ? searchTerms.title.toLowerCase().split(' ') : []
+  const startTime = performance.now() // Start timing the search
+  const titleKeywords = searchTerms.title ? searchTerms.title.toLowerCase().split(' ') : []
 
-    filteredDocuments.value = allDocuments.value.filter((doc) => {
-      const matchesTitle =
-        !searchTerms.title ||
-        titleKeywords.every((keyword) => doc.title.toLowerCase().includes(keyword))
-      const matchesNumber = !searchTerms.number || doc.number === parseInt(searchTerms.number)
-      const matchesYear = !searchTerms.year || doc.year === parseInt(searchTerms.year)
-      return matchesTitle && matchesNumber && matchesYear
-    })
+  filteredDocuments.value = allDocuments.value.filter((doc) => {
+    const matchesTitle =
+      !searchTerms.title ||
+      titleKeywords.every((keyword) => doc.title.toLowerCase().includes(keyword))
+    const matchesNumber = !searchTerms.number || doc.number === parseInt(searchTerms.number)
+    const matchesYear = !searchTerms.year || doc.year === parseInt(searchTerms.year)
+    return matchesTitle && matchesNumber && matchesYear
+  })
 
-    const endTime = performance.now() // End timing the search
-    searchTime.value = ((endTime - startTime) / 1000).toFixed(2) // Calculate time in seconds
-    resultCount.value = filteredDocuments.value.length // Update result count
-    currentPage.value = 1 // Reset to the first page after search
-    isLoading.value = false // End loading
-  }, 2000) // Simulate a delay for loading (2 seconds)
+  const endTime = performance.now() // End timing the search
+  searchTime.value = ((endTime - startTime) / 1000).toFixed(2) // Calculate time in seconds
+  resultCount.value = filteredDocuments.value.length // Update result count
+  currentPage.value = 1 // Reset to the first page after search
+  isLoading.value = false // End loading
 }
 
 const handleFilterChange = (selectedFilters) => {
   isLoading.value = true // Start loading
-  setTimeout(() => {
-    const startTime = performance.now() // Start timing the search
+  const startTime = performance.now() // Start timing the search
 
-    if (selectedFilters.kategori.includes('all')) {
-      filteredDocuments.value = [...allDocuments.value]
-    } else {
-      filteredDocuments.value = allDocuments.value.filter((doc) => {
-        const matchesKategori =
-          !selectedFilters.kategori.length || selectedFilters.kategori.includes(doc.kategori)
-        return matchesKategori
-      })
-    }
+  if (selectedFilters.kategori.includes('all')) {
+    filteredDocuments.value = [...allDocuments.value]
+  } else {
+    filteredDocuments.value = allDocuments.value.filter((doc) => {
+      const matchesKategori =
+        !selectedFilters.kategori.length || selectedFilters.kategori.includes(doc.kategori)
+      return matchesKategori
+    })
+  }
 
-    const endTime = performance.now() // End timing the search
-    searchTime.value = ((endTime - startTime) / 1000).toFixed(2) // Calculate time in seconds
-    resultCount.value = filteredDocuments.value.length // Update result count
-    currentPage.value = 1 // Reset to the first page after filtering
-    isLoading.value = false // End loading
-  }, 2000) // Simulate a delay for loading (2 seconds)
+  const endTime = performance.now() // End timing the search
+  searchTime.value = ((endTime - startTime) / 1000).toFixed(2) // Calculate time in seconds
+  resultCount.value = filteredDocuments.value.length // Update result count
+  currentPage.value = 1 // Reset to the first page after filtering
+  isLoading.value = false // End loading
 }
 
 const handlePageChange = (page) => {
@@ -150,7 +146,10 @@ const goToDetail = (id) => {
 }
 
 onMounted(() => {
+  const startTime = performance.now() // Start timing the initial load
   handleFilterChange({ kategori: [] }) // Initialize with default filters
+  const endTime = performance.now() // End timing the initial load
+  searchTime.value = ((endTime - startTime) / 1000).toFixed(2) // Calculate time in seconds
 })
 </script>
 
