@@ -12,7 +12,7 @@
           v-model="searchTerms.title"
           placeholder="Judul"
           class="input shadow-lg input-bordered pl-12 w-full placeholder-center"
-          style="height: 55px;"
+          style="height: 55px"
           @focus="handleFocus"
           @blur="handleBlur"
           @keydown.enter="search"
@@ -29,7 +29,7 @@
             v-model="searchTerms.number"
             placeholder="Nomor"
             class="input shadow-lg input-bordered pl-12 w-full placeholder-center"
-            style="height: 55px;"
+            style="height: 55px"
             @focus="handleFocus"
             @blur="handleBlur"
             @keydown.enter="search"
@@ -44,7 +44,7 @@
             v-model="searchTerms.year"
             placeholder="Tahun"
             class="input shadow-lg input-bordered pl-12 w-full placeholder-center"
-            style="height: 55px;"
+            style="height: 55px"
             @focus="handleFocus"
             @blur="handleBlur"
             @keydown.enter="search"
@@ -52,14 +52,20 @@
         </div>
         <!-- Tombol "Temukan!" -->
         <div class="flex justify-items-end justify-end w-full lg:w-1/3">
-          <button class="btn w-full text-slate-50 bg-[#ffc067] shadow-lg" style="height: 55px;" @click="search">Temukan!</button>
+          <button
+            class="btn w-full text-slate-50 bg-[#ffc067] shadow-lg"
+            style="height: 55px"
+            @click="search"
+          >
+            Temukan!
+          </button>
         </div>
       </div>
     </div>
     <!-- Tampilkan jumlah hasil dan waktu pencarian -->
     <div class="my-6 text-sm">
-      <p>Menampilkan {{ resultCount }} hasil temuan ({{ searchTime }} detik)</p> 
-    </div>  
+      <p>Menampilkan {{ resultCount }} hasil temuan ({{ searchTime }} detik)</p>
+    </div>
   </div>
 </template>
 
@@ -88,26 +94,26 @@ export default {
   },
   methods: {
     handleFocus(event) {
-      event.target.placeholder = '';
+      event.target.placeholder = ''
     },
     handleBlur(event) {
       const placeholders = {
         judul: 'Judul',
         nomor: 'Nomor',
         tahun: 'Tahun'
-      };
-      const id = event.target.id;
+      }
+      const id = event.target.id
       if (!event.target.value) {
-        event.target.placeholder = placeholders[id];
+        event.target.placeholder = placeholders[id]
       }
     },
     search() {
-      this.$emit('search', this.searchTerms);
+      this.$emit('search', this.searchTerms)
     }
   },
   watch: {
     resultCount(newCount) {
-      this.showErrorMessage = newCount === 0;
+      this.showErrorMessage = newCount === 0
     }
   }
 }

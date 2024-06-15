@@ -1,8 +1,13 @@
 <template>
-    <div class="flex flex-col gap-4 p-4 bg-white rounded-lg custom-shadow">
-      <h2 class="text-2xl font-semibold text-center text-teal-500">Dasar Hukum</h2>
-      <ol class="list-decimal pl-5">
-        <li>Undang-Undang Nomor 14 Tahun 1964 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 3 Tahun 1964 tentang Pembentukan Daerah Tingkat I Lampung dengan mengubah Undang-Undang Nomor 25 Tahun 1954 tentang Pembentukan Daerah Tingkat I Sumatera Selatan menjadi Undang-Undang;</li>
+  <div class="flex flex-col gap-4 p-4 bg-white rounded-lg custom-shadow">
+    <h2 class="text-2xl font-semibold text-center text-teal-500">Dasar Hukum</h2>
+    <ol class="list-decimal pl-5">
+      <li>
+        Undang-Undang Nomor 14 Tahun 1964 tentang Penetapan Peraturan Pemerintah Pengganti
+        Undang-Undang Nomor 3 Tahun 1964 tentang Pembentukan Daerah Tingkat I Lampung dengan
+        mengubah Undang-Undang Nomor 25 Tahun 1954 tentang Pembentukan Daerah Tingkat I Sumatera
+        Selatan menjadi Undang-Undang;
+      </li>
       <li>Undang-Undang Nomor 14 tahun 2008 tentang Keterbukaan Informasi Publik;</li>
       <li>Undang-Undang Nomor 25 tahun 2009 tentang Pelayanan Publik;</li>
       <li>Undang-Undang Nomor 12 Tahun 2011 tentang Pembentukan Peraturan Perundang-Undangan;</li>
@@ -59,22 +64,30 @@
         Lampung Nomor 51 tahun 2020 tentang Tata Kelola Sistem Pemerintahan Berbasis Elektronik;
       </li>
       <li>Surat Keputusan Gubernur Lampung Nomor ... Tahun 2022 tentang Tim Pengembangan JDIH;</li>
-      <li>Surat Keputusan Sekrataris Daerah Provinsi Lampung Nomor G/637/B.03/HK/2022 tentang Pembentukan Pengelola Perpustakaan Hukum Jaringan Dokumentasi dan Hukum Biro Hukum Sekretariat Daerah Provinsi Lampung;</li>
-      <li>Surat Keputusan Sekrataris Daerah Provinsi Lampung Nomor G/636/B.03/HK/2022 tentang Pembentukan Tim Pengelola E-Jaringan Dokumentasi dan Informasi Hukum pada Biro Hukum Sekretariar Daerah Provinsi Lampung.</li>
-      </ol>
-    </div>
-  </template>
-  
-  <script>
-  export default {
-    name: 'DasarHukum',
-  };
-  </script>
+      <li>
+        Surat Keputusan Sekrataris Daerah Provinsi Lampung Nomor G/637/B.03/HK/2022 tentang
+        Pembentukan Pengelola Perpustakaan Hukum Jaringan Dokumentasi dan Hukum Biro Hukum
+        Sekretariat Daerah Provinsi Lampung;
+      </li>
+      <li>
+        Surat Keputusan Sekrataris Daerah Provinsi Lampung Nomor G/636/B.03/HK/2022 tentang
+        Pembentukan Tim Pengelola E-Jaringan Dokumentasi dan Informasi Hukum pada Biro Hukum
+        Sekretariar Daerah Provinsi Lampung.
+      </li>
+    </ol>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'DasarHukum'
+}
+</script>
 
 <style scoped>
-
 .custom-shadow {
-  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+  box-shadow:
+    0 1px 20px rgba(0, 0, 0, 0.1),
+    0 2px 4px rgba(0, 0, 0, 0.06);
 }
-
 </style>
