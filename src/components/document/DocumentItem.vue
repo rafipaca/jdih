@@ -8,7 +8,9 @@
       class="flex flex-row sm:flex-col sm:ml-5 items-center justify-center text-center text-black w-1/6 rounded-l-lg sm:border-r-2 sm:border-[#006859]"
     >
       <span class="text-5xl font-black text-[#004E43]">{{ document.date }}</span>
-      <div class="rounded-lg bg-[#006859] h-10 flex items-center sm:h-full ml-4 sm:mt-4 sm:ml-0 p-1 pr-4 pl-4">
+      <div
+        class="rounded-lg bg-[#006859] h-10 flex items-center sm:h-full ml-4 sm:mt-4 sm:ml-0 p-1 pr-4 pl-4"
+      >
         <span class="text-sm text-white">{{ document.month }}</span>
       </div>
     </div>
@@ -20,7 +22,7 @@
       <div class="relative card-actions justify-center my-5 sm:my-0 sm:justify-end">
         <button
           @click.stop="handleDownload"
-          class="btn relative z-10 text-slate-50 bg-[#ffc067] shadow-lg hover:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#ffc067]"
+          class="btn z-10 text-slate-50 bg-[#ffc067] shadow-lg hover:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#ffc067]"
         >
           Unduh
         </button>
@@ -67,12 +69,12 @@ export default {
       this.$emit('card-click', this.document.id)
     },
     handleDownload(event) {
-      event.stopPropagation(); // Stop event propagation manually
-      const link = this.document.link;
+      event.stopPropagation() // Stop event propagation manually
+      const link = this.document.link
       if (link) {
-        window.open(link, '_blank'); // Open the link in a new tab
+        window.open(link, '_blank') // Open the link in a new tab
       } else {
-        console.log('No download link available for document', this.document.id);
+        console.log('No download link available for document', this.document.id)
       }
     }
   }
