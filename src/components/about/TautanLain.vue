@@ -26,7 +26,7 @@
     <!-- Div kedua -->
     <div class="flex flex-col gap-4 p-4 bg-white rounded-lg custom-shadow">
       <h2 class="text-xl font-semibold text-center text-teal-500">
-        Berikut ini merupakan Anggota JDIH Provinsi Lampung serta alamat Website JDIH masing-masing
+        Anggota JDIH Provinsi Lampung
       </h2>
       <div class="overflow-y-auto max-h-64">
         <table class="min-w-full mt-4 table-auto">

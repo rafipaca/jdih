@@ -5,6 +5,7 @@ import KoleksiHome from '@/components/home/KoleksiHome.vue'
 import KeputusanHome from '@/components/home/KeputusanHome.vue'
 import ArtikelHome from '@/components/home/ArtikelHome.vue'
 import StatistikHome from '@/components/home/StatistikHome.vue'
+import TautanLainHome from '@/components/home/TautanLainHome.vue'
 </script>
 
 <template>
@@ -13,4 +14,5 @@ import StatistikHome from '@/components/home/StatistikHome.vue'
   <KeputusanHome />
   <ArtikelHome />
   <StatistikHome />
+  <TautanLainHome />
 </template>
