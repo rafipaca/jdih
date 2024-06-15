@@ -1,5 +1,5 @@
 <template>
-    <div class="keputusan-home bg-primary p-10">
+    <div class="keputusan-home bg-ternary p-10">
       <div class="flex gap-3 justify-center">
         <div class="w-28 text-center text-white p-2 rounded-full border-2 hover:bg-secondary border-secondary">populer</div>
         <div class="w-28 text-center text-white p-2 rounded-full border-2 hover:bg-secondary border-secondary">terbaru</div>
@@ -12,6 +12,9 @@
           @card-click="handleCardClick"
           class="document-item-custom"
         />
+      </div>
+      <div class="w-full flex justify-center mt-10 mb-5">
+        <button class="bg-primary py-3 px-6 text-white rounded-full hover:bg-secondary">Lihat Semua</button>
       </div>
     </div>
   </template>
