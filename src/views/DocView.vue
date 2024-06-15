@@ -110,7 +110,8 @@ const handleSearch = (searchTerms) => {
   })
 
   const endTime = performance.now() // End timing the search
-  searchTime.value = ((endTime - startTime) / 1000).toFixed(2) // Calculate time in seconds
+  let actualSearchTime = ((endTime - startTime) / 1000) // Calculate time in seconds
+  searchTime.value = (actualSearchTime + 0.05).toFixed(2) // Add 0.05 seconds to the actual search time
   resultCount.value = filteredDocuments.value.length // Update result count
   currentPage.value = 1 // Reset to the first page after search
   isLoading.value = false // End loading
@@ -131,7 +132,8 @@ const handleFilterChange = (selectedFilters) => {
   }
 
   const endTime = performance.now() // End timing the search
-  searchTime.value = ((endTime - startTime) / 1000).toFixed(2) // Calculate time in seconds
+  let actualFilterTime = ((endTime - startTime) / 1000) // Calculate time in seconds
+  searchTime.value = (actualFilterTime + 0.05).toFixed(2) // Add 0.05 seconds to the actual filter time
   resultCount.value = filteredDocuments.value.length // Update result count
   currentPage.value = 1 // Reset to the first page after filtering
   isLoading.value = false // End loading
@@ -149,7 +151,8 @@ onMounted(() => {
   const startTime = performance.now() // Start timing the initial load
   handleFilterChange({ kategori: [] }) // Initialize with default filters
   const endTime = performance.now() // End timing the initial load
-  searchTime.value = ((endTime - startTime) / 1000).toFixed(2) // Calculate time in seconds
+  let actualLoadTime = ((endTime - startTime) / 1000) // Calculate time in seconds
+  searchTime.value = (actualLoadTime + 0.05).toFixed(2) // Add 0.05 seconds to the actual load time
 })
 </script>
 
