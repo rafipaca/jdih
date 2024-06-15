@@ -66,7 +66,8 @@ export default {
     handleClick() {
       this.$emit('card-click', this.document.id)
     },
-    handleDownload() {
+    handleDownload(event) {
+      event.stopPropagation(); // Stop event propagation manually
       const link = this.document.link;
       if (link) {
         window.open(link, '_blank'); // Open the link in a new tab
