@@ -1,7 +1,7 @@
 <template>
   <div
     @click="handleClick"
-    class="flex flex-col items-center sm:flex-row card card-side bg-base-100 border shadow-lg mb-4 h-52 pt-9 pb-9 hover:bg-[#9AD0C2] transition-colors duration-300"
+    class="relative flex flex-col items-center sm:flex-row card card-side bg-base-100 border shadow-lg mb-4 h-52 pt-9 pb-9 hover:bg-[#9AD0C2] transition-colors duration-300"
   >
     <!-- Left section for the date and month (1/6 of the card) -->
     <div
@@ -17,10 +17,10 @@
     <div class="card-body justify-center text-center sm:text-left w-full">
       <h2 class="card-title">{{ document.title }}</h2>
       <p class="text-sm">{{ truncatedDescription }}</p>
-      <div class="card-actions justify-center my-5 sm:my-0 sm:justify-end">
+      <div class="relative card-actions justify-center my-5 sm:my-0 sm:justify-end">
         <button
           @click.stop="handleDownload"
-          class="btn text-slate-50 bg-[#ffc067] shadow-lg hover:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#ffc067]"
+          class="btn relative z-10 text-slate-50 bg-[#ffc067] shadow-lg hover:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#ffc067]"
         >
           Unduh
         </button>
