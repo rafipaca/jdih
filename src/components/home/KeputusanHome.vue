@@ -4,7 +4,7 @@
         <div class="w-28 text-center text-white p-2 rounded-full border-2 hover:bg-secondary border-secondary">populer</div>
         <div class="w-28 text-center text-white p-2 rounded-full border-2 hover:bg-secondary border-secondary">terbaru</div>
       </div>
-      <div class="flex flex-wrap gap-8 justify-center mt-10">
+      <div class="flex flex-col items-center sm:flex-row sm:flex-wrap gap-8 justify-center mt-10">
         <DocumentItem
           v-for="document in topDocuments"
           :key="document.id"
@@ -18,7 +18,7 @@
   
   <script>
   import { ref, computed } from 'vue';
-  import { allDocuments } from '@/components/data.js'; // Import data dari data.js
+  import { allDocuments } from '@/components/data.js'; 
   import DocumentItem from '@/components/document/DocumentItem.vue';
   
   export default {
@@ -38,7 +38,6 @@
       });
   
       const handleCardClick = (id) => {
-        // Tangani logika ketika card diklik
         console.log('Card clicked, document id:', id);
       };
   
@@ -52,12 +51,21 @@
   
   <style scoped>
   .keputusan-home .document-item-custom {
-    width: 40%;
-    background-color: #006859;
-    color: white;
+    width: 43%;
+    height: 17rem;
+    /* background-color: #006859; */
+    /* color: white; */
     border: 0;
+    /* display: flex; */
   }
   
+  @media (max-width: 640px) {
+    .keputusan-home .document-item-custom {
+    width: 90%;
+    height: fit-content;
+  }
+}
+
   .keputusan-home .document-item-custom .btn-aja {
     background-color: #000;
   }
