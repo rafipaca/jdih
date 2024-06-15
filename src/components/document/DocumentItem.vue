@@ -20,7 +20,7 @@
       <div class="card-actions justify-center my-5 sm:my-0 sm:justify-end">
         <button
           @click.stop="handleDownload"
-          class="btn text-slate-50 bg-[#ffc067] shadow-lg hover:bg-white"
+          class="btn text-slate-50 bg-[#ffc067] shadow-lg hover:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#ffc067]"
         >
           Unduh
         </button>
@@ -105,5 +105,13 @@ export default {
   transition:
     background-color 0.3s ease,
     color 0.3s ease;
+}
+
+.btn {
+  padding: 0.5rem 1rem; /* Ensure the button has sufficient padding */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.375rem;
 }
 </style>
