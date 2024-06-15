@@ -1,7 +1,7 @@
 <template>
   <div
     @click="handleClick"
-    class="flex flex-col items-center sm:flex-row card card-side bg-base-100 border shadow-lg mb-4 h-52 pt-9 pb-9 hover:bg-[#9AD0C2] transition-colors duration-300"
+    class="relative flex flex-col items-center sm:flex-row card card-side bg-base-100 border shadow-lg mb-4 h-52 pt-9 pb-9 hover:bg-[#9AD0C2] transition-colors duration-300"
   >
     <!-- Left section for the date and month (1/6 of the card) -->
     <div
@@ -19,10 +19,10 @@
     <div class="card-body justify-center text-center sm:text-left w-full">
       <h2 class="card-title">{{ document.title }}</h2>
       <p class="text-sm">{{ truncatedDescription }}</p>
-      <div class="card-actions justify-center my-5 sm:my-0 sm:justify-end">
+      <div class="relative card-actions justify-center my-5 sm:my-0 sm:justify-end">
         <button
           @click.stop="handleDownload"
-          class="btn text-slate-50 bg-[#ffc067] shadow-lg hover:bg-white"
+          class="btn relative z-10 text-slate-50 bg-[#ffc067] shadow-lg hover:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#ffc067]"
         >
           Unduh
         </button>
@@ -68,8 +68,9 @@ export default {
     handleClick() {
       this.$emit('card-click', this.document.id)
     },
-    handleDownload() {
-      const link = this.document.link
+    handleDownload(event) {
+      event.stopPropagation(); // Stop event propagation manually
+      const link = this.document.link;
       if (link) {
         window.open(link, '_blank') // Open the link in a new tab
       } else {
@@ -106,5 +107,13 @@ export default {
   transition:
     background-color 0.3s ease,
     color 0.3s ease;
+}
+
+.btn {
+  padding: 0.5rem 1rem; /* Ensure the button has sufficient padding */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.375rem;
 }
 </style>
