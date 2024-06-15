@@ -1,31 +1,31 @@
 <template>
-  <div>
-    <div class="text-4xl text-center mt-10 font-bold">Tentang Kami</div>
-    <div class="border-t-2 border-teal-500 w-[10%] mx-auto mb-2 mt-2"></div>
-    
-    <!-- Breadcrumb -->
-    <div class="text-sm italic font-light flex justify-center mb-5 text-[#2D9596]">
-      <ul class="flex">
-        <li v-for="(crumb, index) in breadcrumbs" :key="index" class="flex items-center">
-          <a v-if="crumb.url" :href="crumb.url">{{ crumb.text }}</a>
-          <span v-else>{{ crumb.text }}</span>
-          <span v-if="index < breadcrumbs.length - 1" class="mx-2">/</span>
-        </li>
-      </ul>
-    </div>
-
-    <section class="flex flex-col lg:flex-row items-start justify-center py-8 px-4">
-      <div class="text-center mb-8"></div>
-      <div class="flex flex-col lg:flex-row items-start justify-center w-full gap-4">
-        <aside class="w-full lg:w-1/4 p-4">
-          <Sidebar @changeContent="changeContent" />
-        </aside>
-        <main class="w-full lg:w-2/4 p-4">
-          <component :is="currentComponent" />
-        </main>
+  <DecorContainer>
+    <div>
+      <!-- Breadcrumb -->
+      <div class="text-sm italic font-light flex justify-center mt-5 text-[#2D9596]">
+        <ul class="flex">
+          <li v-for="(crumb, index) in breadcrumbs" :key="index" class="flex items-center">
+            <a v-if="crumb.url" :href="crumb.url">{{ crumb.text }}</a>
+            <span v-else>{{ crumb.text }}</span>
+            <span v-if="index < breadcrumbs.length - 1" class="mx-2">/</span>
+          </li>
+        </ul>
       </div>
-    </section>
-  </div>
+      <div class="text-4xl text-center mt-2 font-bold">Tentang Kami</div>
+      <div class="border-t-4 border-[#006859] w-[6%] mx-auto mb-2 mt-6"></div>
+      <section class="flex flex-col lg:flex-row items-start justify-center py-2 px-4">
+        <div class="text-center mb-8"></div>
+        <div class="flex flex-col lg:flex-row items-start justify-center w-full">
+          <aside class="w-full lg:w-[18%] p-2">
+            <Sidebar @changeContent="changeContent" />
+          </aside>
+          <main class="w-full lg:w-[75%] p-2">
+            <component :is="currentComponent" />
+          </main>
+        </div>
+      </section>
+    </div>
+  </DecorContainer>
 </template>
 
 <script>
@@ -38,6 +38,7 @@ import StrukturOrganisasi from '../components/about/StrukturOrganisasi.vue';
 import SopPelayanan from '../components/about/SopPelayanan.vue';
 import TautanLain from '../components/about/TautanLain.vue';
 import KontakKami from '../components/about/KontakKami.vue';
+import DecorContainer from '../components/DecorContainer.vue';
 
 export default {
   name: 'AboutView',
@@ -50,11 +51,12 @@ export default {
     SopPelayanan,
     TautanLain,
     KontakKami,
+    DecorContainer,
   },
   setup() {
     const currentComponent = ref('VisiMisi');
     const breadcrumbs = ref([
-      { text: 'Tentang', url: '/tentang' },
+      { text: 'Tentang', url: '/about' },
       { text: 'Visi Misi' }
     ]);
 
@@ -74,7 +76,7 @@ export default {
         KontakKami: 'Kontak'
       };
       breadcrumbs.value = [
-        { text: 'Tentang', url: '/tentang' },
+        { text: 'Tentang', url: '/about' },
         { text: breadcrumbMap[componentName] }
       ];
     };
