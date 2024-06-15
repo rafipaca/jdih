@@ -2,25 +2,26 @@
   <div>
     <!-- Div pertama -->
     <div class="flex flex-col gap-4 p-4 bg-white rounded-lg custom-shadow mb-8">
-      <h2 class="text-2xl font-semibold text-center text-teal-500">Tautan Lain</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+    <h2 class="text-2xl font-semibold text-center text-teal-500">Tautan Lain</h2>
+    <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
         <div class="flex items-center p-4 bg-gray-50 rounded-lg shadow-md">
-          <img src="@/assets/logojdih.png" alt="Portal JDIHN" class="w-10 h-10 mr-4">
-          <a href="#" class="text-lg font-medium text-gray-700">Portal JDIHN</a>
+            <img src="@/assets/logojdih.png" alt="Portal JDIHN" class="w-10 h-10 mr-4">
+            <a href="#" class="text-lg font-medium text-gray-700">Portal JDIHN</a>
         </div>
         <div class="flex items-center p-4 bg-gray-50 rounded-lg shadow-md">
-          <img src="@/assets/logoppid.png" alt="Portal PPID" class="w-10 h-10 mr-4">
-          <a href="#" class="text-lg font-medium text-gray-700">Portal PPID</a>
+            <img src="@/assets/logoppid.png" alt="Portal PPID" class="w-10 h-10 mr-4">
+            <a href="#" class="text-lg font-medium text-gray-700">Portal PPID</a>
         </div>
         <div class="flex items-center p-4 bg-gray-50 rounded-lg shadow-md">
-          <img src="@/assets/logojdih.png" alt="Perpustakaan JDIH" class="w-10 h-10 mr-4">
-          <a href="#" class="text-lg font-medium text-gray-700">Perpustakaan JDIH</a>
+            <img src="@/assets/logojdih.png" alt="Perpustakaan JDIH" class="w-10 h-10 mr-4">
+            <a href="#" class="text-lg font-medium text-gray-700">Perpustakaan JDIH</a>
         </div>
         <div class="flex items-center p-4 bg-gray-50 rounded-lg shadow-md">
-          <img src="@/assets/logoplaystore.png" alt="Aplikasi Mobile" class="w-10 h-10 mr-4">
-          <a href="#" class="text-lg font-medium text-gray-700">Aplikasi Mobile</a>
+            <img src="@/assets/logoplaystore.png" alt="Aplikasi Mobile" class="w-10 h-10 mr-4">
+            <a href="#" class="text-lg font-medium text-gray-700">Aplikasi Mobile</a>
         </div>
-      </div>
+    </div>
+
     </div>
 
     <!-- Div kedua -->

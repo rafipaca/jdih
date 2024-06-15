@@ -1,6 +1,7 @@
 <template>
   <DecorContainer>
-    <div>
+
+    <div class="w-[100vw]">
       <!-- Breadcrumb -->
       <div class="text-sm italic font-light flex justify-center mt-5 text-[#2D9596]">
         <ul class="flex">
