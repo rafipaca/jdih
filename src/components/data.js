@@ -7,7 +7,8 @@ export const allDocuments = ref([
     month: 'Jan',
     number: 1,
     title: 'KEPUTUSAN GUBERNUR No. 1 Tahun 2024',
-    description:'Keputusan Gubernur Lampung Nomor 1 Tahun 2024 Tentang Penunjukan Koordinator Pengelolaan Keuangan Daerah Anggaran Pendapatan dan Belanja Daerah Provinsi Lampung Tahun Anggaran 2024 Diterbitkan di Biro Hukum,2024 dengan Subjek Penunjukan Koordinator Pengelolaan Keuangan Daerah Anggaran Pendapatan dan Belanja Daerah Provinsi Lampung Tahun Anggaran 2024',
+    description:
+      'Keputusan Gubernur Lampung Nomor 1 Tahun 2024 Tentang Penunjukan Koordinator Pengelolaan Keuangan Daerah Anggaran Pendapatan dan Belanja Daerah Provinsi Lampung Tahun Anggaran 2024 Diterbitkan di Biro Hukum,2024 dengan Subjek Penunjukan Koordinator Pengelolaan Keuangan Daerah Anggaran Pendapatan dan Belanja Daerah Provinsi Lampung Tahun Anggaran 2024',
     year: 2024,
     downloads: 2,
     views: 4,

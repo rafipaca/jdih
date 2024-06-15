@@ -22,7 +22,7 @@
       <div class="relative card-actions justify-center my-5 sm:my-0 sm:justify-end">
         <button
           @click.stop="handleDownload"
-          class="btn z-10 text-slate-50 bg-[#ffc067] shadow-lg hover:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#ffc067]"
+          class="btn relative z-10 text-slate-50 bg-[#ffc067] shadow-lg hover:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#ffc067]"
         >
           Unduh
         </button>
@@ -69,8 +69,8 @@ export default {
       this.$emit('card-click', this.document.id)
     },
     handleDownload(event) {
-      event.stopPropagation() // Stop event propagation manually
-      const link = this.document.link
+      event.stopPropagation(); // Stop event propagation manually
+      const link = this.document.link;
       if (link) {
         window.open(link, '_blank') // Open the link in a new tab
       } else {

@@ -40,24 +40,22 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue';
-import { useRouter } from 'vue-router';
-import DocumentFilter from '../components/document/DocumentFilter.vue';
-import DocumentList from '../components/document/DocumentList.vue';
-import SidebarCheckbox from '../components/document/SidebarCheckbox.vue';
-import Pagination from '../components/document/Pagination.vue';
-import DecorContainer from '../components/DecorContainer.vue';
-import LoadingSpinner from '../components/LoadingSpinner.vue';  
-import { allDocuments } from '../components/data';
+import { ref, computed, onMounted } from 'vue'
+import { useRouter } from 'vue-router'
+import DocumentFilter from '../components/document/DocumentFilter.vue'
+import DocumentList from '../components/document/DocumentList.vue'
+import SidebarCheckbox from '../components/document/SidebarCheckbox.vue'
+import Pagination from '../components/document/Pagination.vue'
+import DecorContainer from '../components/DecorContainer.vue'
+import LoadingSpinner from '../components/LoadingSpinner.vue'
+import { allDocuments } from '../components/data'
 
-const filteredDocuments = ref([...allDocuments.value]);
-const currentPage = ref(1);
-const pageSize = 5; 
-const isLoading = ref(false); // Tambahkan state untuk loading
-const router = useRouter();
-const breadcrumbs = ref([
-  { text: 'Documents', url: '/dokumen' }
-]);
+const filteredDocuments = ref([...allDocuments.value])
+const currentPage = ref(1)
+const pageSize = 5
+const isLoading = ref(false) // Tambahkan state untuk loading
+const router = useRouter()
+const breadcrumbs = ref([{ text: 'Documents', url: '/dokumen' }])
 
 const availableFilters = ref([
   {
@@ -84,10 +82,10 @@ const availableFilters = ref([
     ]
   }
   // Tambahkan filter lain jika diperlukan...
-]);
+])
 
-const resultCount = ref(0); 
-const searchTime = ref(0);  
+const resultCount = ref(0)
+const searchTime = ref(0)
 
 const paginatedDocuments = computed(() => {
   const startIndex = (currentPage.value - 1) * pageSize
@@ -98,30 +96,32 @@ const paginatedDocuments = computed(() => {
 const totalPages = computed(() => Math.ceil(filteredDocuments.value.length / pageSize))
 
 const handleSearch = (searchTerms) => {
-  isLoading.value = true; // Start loading
+  isLoading.value = true // Start loading
   setTimeout(() => {
-    const startTime = performance.now(); // Start timing the search
-    const titleKeywords = searchTerms.title ? searchTerms.title.toLowerCase().split(' ') : [];
+    const startTime = performance.now() // Start timing the search
+    const titleKeywords = searchTerms.title ? searchTerms.title.toLowerCase().split(' ') : []
 
-    filteredDocuments.value = allDocuments.value.filter(doc => {
-      const matchesTitle = !searchTerms.title || titleKeywords.every(keyword => doc.title.toLowerCase().includes(keyword));
-      const matchesNumber = !searchTerms.number || doc.number === parseInt(searchTerms.number);
-      const matchesYear = !searchTerms.year || doc.year === parseInt(searchTerms.year);
-      return matchesTitle && matchesNumber && matchesYear;
-    });
+    filteredDocuments.value = allDocuments.value.filter((doc) => {
+      const matchesTitle =
+        !searchTerms.title ||
+        titleKeywords.every((keyword) => doc.title.toLowerCase().includes(keyword))
+      const matchesNumber = !searchTerms.number || doc.number === parseInt(searchTerms.number)
+      const matchesYear = !searchTerms.year || doc.year === parseInt(searchTerms.year)
+      return matchesTitle && matchesNumber && matchesYear
+    })
 
-    const endTime = performance.now(); // End timing the search
-    searchTime.value = ((endTime - startTime) / 1000).toFixed(2); // Calculate time in seconds
-    resultCount.value = filteredDocuments.value.length; // Update result count
-    currentPage.value = 1; // Reset to the first page after search
-    isLoading.value = false; // End loading
-  }, 2000); // Simulate a delay for loading (2 seconds)
-};
+    const endTime = performance.now() // End timing the search
+    searchTime.value = ((endTime - startTime) / 1000).toFixed(2) // Calculate time in seconds
+    resultCount.value = filteredDocuments.value.length // Update result count
+    currentPage.value = 1 // Reset to the first page after search
+    isLoading.value = false // End loading
+  }, 2000) // Simulate a delay for loading (2 seconds)
+}
 
 const handleFilterChange = (selectedFilters) => {
-  isLoading.value = true; // Start loading
+  isLoading.value = true // Start loading
   setTimeout(() => {
-    const startTime = performance.now(); // Start timing the search
+    const startTime = performance.now() // Start timing the search
 
     if (selectedFilters.kategori.includes('all')) {
       filteredDocuments.value = [...allDocuments.value]
@@ -132,26 +132,26 @@ const handleFilterChange = (selectedFilters) => {
         return matchesKategori
       })
     }
-    
-    const endTime = performance.now(); // End timing the search
-    searchTime.value = ((endTime - startTime) / 1000).toFixed(2); // Calculate time in seconds
-    resultCount.value = filteredDocuments.value.length; // Update result count
-    currentPage.value = 1; // Reset to the first page after filtering
-    isLoading.value = false; // End loading
-  }, 2000); // Simulate a delay for loading (2 seconds)
-};
+
+    const endTime = performance.now() // End timing the search
+    searchTime.value = ((endTime - startTime) / 1000).toFixed(2) // Calculate time in seconds
+    resultCount.value = filteredDocuments.value.length // Update result count
+    currentPage.value = 1 // Reset to the first page after filtering
+    isLoading.value = false // End loading
+  }, 2000) // Simulate a delay for loading (2 seconds)
+}
 
 const handlePageChange = (page) => {
   currentPage.value = page
 }
 
 const goToDetail = (id) => {
-  router.push({ name: 'detailcard', params: { id } });
-};
+  router.push({ name: 'detailcard', params: { id } })
+}
 
 onMounted(() => {
-  handleFilterChange({ kategori: [] }); // Initialize with default filters
-});
+  handleFilterChange({ kategori: [] }) // Initialize with default filters
+})
 </script>
 
 <style scoped>

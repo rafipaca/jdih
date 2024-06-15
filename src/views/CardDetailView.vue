@@ -28,7 +28,9 @@
         <RelatedDocuments :kategori="document.kategori" :currentDocumentId="document.id" />
       </div>
       <div class="text-center mt-8">
-        <a href="/dokumen" class="btn text-slate-50 bg-[#006859] shadow-lg hover:bg-white">Kembali</a>
+        <a href="/dokumen" class="btn text-slate-50 bg-[#006859] shadow-lg hover:bg-white"
+          >Kembali</a
+        >
       </div>
     </div>
   </DecorContainer>
@@ -40,7 +42,7 @@ import { useRoute } from 'vue-router'
 import { allDocuments } from '../components/data'
 import MetadataSection from '../components/carddetail/MetadataSection.vue'
 import RelatedDocuments from '../components/carddetail/RelatedDocuments.vue'
-import DecorContainer from '../components/DecorContainer.vue';
+import DecorContainer from '../components/DecorContainer.vue'
 
 const route = useRoute()
 const documentId = ref(parseInt(route.params.id))
