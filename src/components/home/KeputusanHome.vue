@@ -1,5 +1,5 @@
 <template>
-  <div class="keputusan-home bg-ternary p-10">
+  <div class="keputusan-home bg-primary p-10">
     <div class="flex gap-3 justify-center">
       <div
         class="text-center text-white px-6 py-3 rounded-full border-2 hover:bg-secondary border-secondary cursor-pointer">

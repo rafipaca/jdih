@@ -54,13 +54,8 @@ img {
   border-radius: 8px;
 }
 
-.w-full {
-  width: 100%;
-}
-
 @media (min-width: 768px) {
   .flex {
-    max-width: 1000px;
     margin: 0 auto;
   }
 }
