@@ -66,8 +66,12 @@ export default {
       this.$emit('card-click', this.document.id)
     },
     handleDownload() {
-      // Logika untuk mengunduh dokumen di sini
-      console.log('Download document', this.document.id)
+      const link = this.document.link;
+      if (link) {
+        window.open(link, '_blank'); // Open the link in a new tab
+      } else {
+        console.log('No download link available for document', this.document.id);
+      }
     }
   }
 }
