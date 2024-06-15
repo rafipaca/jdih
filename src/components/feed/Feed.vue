@@ -1,11 +1,12 @@
 <template>
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+  <div class="grid grid-cols-3 gap-8 p-8 ml-28">
     <FeedItem
       v-for="(item, index) in items"
       :key="index"
       :image="item.image"
+      :date="item.date"
       :title="item.title"
-      :description="item.description"
+      @click="goToDetail"
     />
   </div>
 </template>
@@ -22,13 +23,65 @@ export default {
     return {
       items: [
         {
-          image: 'path/to/image1.jpg',
-          title: 'Title 1',
-          description: 'Description 1'
-        }
-        // Add more items as needed
+          image: new URL('@/assets/Rectangle 42.png', import.meta.url).href,
+          date: '2 Mei 2024',
+          title: 'Pelantikan PJ Bupati Tulang Bawang Barat Dan Pengukuhan Kembali PJ Bupati Pringsewu Dan Mesuji'
+        },
+        {
+          image: new URL('@/assets/Rectangle 42.png', import.meta.url).href,
+          date: '2 Mei 2024',
+          title: 'Pelantikan PJ Bupati Tulang Bawang Barat Dan Pengukuhan Kembali PJ Bupati Pringsewu Dan Mesuji'
+        },
+        {
+          image: new URL('@/assets/Rectangle 42.png', import.meta.url).href,
+          date: '2 Mei 2024',
+          title: 'Pelantikan PJ Bupati Tulang Bawang Barat Dan Pengukuhan Kembali PJ Bupati Pringsewu Dan Mesuji'
+        },
+        {
+          image: new URL('@/assets/Rectangle 42.png', import.meta.url).href,
+          date: '2 Mei 2024',
+          title: 'Pelantikan PJ Bupati Tulang Bawang Barat Dan Pengukuhan Kembali PJ Bupati Pringsewu Dan Mesuji'
+        },
+        {
+          image: new URL('@/assets/Rectangle 42.png', import.meta.url).href,
+          date: '2 Mei 2024',
+          title: 'Pelantikan PJ Bupati Tulang Bawang Barat Dan Pengukuhan Kembali PJ Bupati Pringsewu Dan Mesuji'
+        },
+        {
+          image: new URL('@/assets/Rectangle 42.png', import.meta.url).href,
+          date: '2 Mei 2024',
+          title: 'Pelantikan PJ Bupati Tulang Bawang Barat Dan Pengukuhan Kembali PJ Bupati Pringsewu Dan Mesuji'
+        },
+        {
+          image: new URL('@/assets/Rectangle 42.png', import.meta.url).href,
+          date: '2 Mei 2024',
+          title: 'Pelantikan PJ Bupati Tulang Bawang Barat Dan Pengukuhan Kembali PJ Bupati Pringsewu Dan Mesuji'
+        },
+        {
+          image: new URL('@/assets/Rectangle 42.png', import.meta.url).href,
+          date: '2 Mei 2024',
+          title: 'Pelantikan PJ Bupati Tulang Bawang Barat Dan Pengukuhan Kembali PJ Bupati Pringsewu Dan Mesuji'
+        },
+        {
+          image: new URL('@/assets/Rectangle 42.png', import.meta.url).href,
+          date: '2 Mei 2024',
+          title: 'Pelantikan PJ Bupati Tulang Bawang Barat Dan Pengukuhan Kembali PJ Bupati Pringsewu Dan Mesuji'
+        },
       ]
+    }
+  },
+  methods: {
+    goToDetail() {
+      this.$router.push({ name: 'feed-detail' });
     }
   }
 }
 </script>
+
+<style scoped>
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+</style>
