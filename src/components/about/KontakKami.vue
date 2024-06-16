@@ -2,19 +2,19 @@
   <div class="flex flex-col gap-4 p-6 bg-white rounded-lg custom-shadow">
     <h2 class="text-2xl font-semibold text-center text-teal-500">Kontak Kami</h2>
     <div class="flex flex-row justify-between">
-      <div>
+      <div class="ml-20 text-center">
         <h2 class="text-lg font-semibold text-teal-500">Pelayanan</h2>
         <p class="text-sm font-semibold">Telepon</p>
         <p class="text-sm mb-4">(0721) 481107</p>
         <p class="text-sm font-semibold">Jam Pelayanan Kantor</p>
         <p class="text-sm">Senin - Jumat 08:00 - 15:30 WIB</p>
       </div>
-      <div>
+      <div class="mr-20 text-center">
         <h2 class="text-lg font-semibold text-teal-500">Alamat dan Email</h2>
         <p class="text-sm font-semibold">Alamat</p>
         <p class="text-sm mb-4">Jl. WR.Mongonsidi No.69 Teluk Betung</p>
         <p class="text-sm font-semibold">Email</p>
-        <p class="text-sm">
+        <p class="text-sm hover-teal">
           <a href="mailto:birohukum@lampungprov.go.id">birohukum@lampungprov.go.id</a>
         </p>
       </div>
@@ -43,4 +43,7 @@ export default {
     0 1px 20px rgba(0, 0, 0, 0.1),
     0 2px 4px rgba(0, 0, 0, 0.06);
 }
+.hover-teal a:hover {
+            color: #38b2ac; /* Mengatur warna teks saat hover ke teal-500 */
+        }
 </style>
