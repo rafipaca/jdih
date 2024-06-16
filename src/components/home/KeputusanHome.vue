@@ -29,6 +29,7 @@
 
 <script>
 import { ref, computed } from 'vue'
+import { useRouter } from 'vue-router'
 import { allDocuments } from '@/components/data.js'
 import DocumentItem from '@/components/document/DocumentItem.vue'
 
@@ -38,6 +39,7 @@ export default {
     DocumentItem
   },
   setup() {
+    const router = useRouter()
     const documents = allDocuments
 
     // Computed property untuk mendapatkan 4 dokumen teratas berdasarkan views
@@ -50,7 +52,7 @@ export default {
 
     const handleCardClick = (id) => {
       console.log('Card clicked, document id:', id)
-      this.$emit('card-click', id)
+      router.push({ name: 'detailcard', params: { id } })
     }
 
     return {
