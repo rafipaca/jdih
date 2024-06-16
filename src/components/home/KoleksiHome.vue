@@ -1,7 +1,7 @@
 <template>
   <div class="py-20 mb-10">
     <h1 class="text-center text-4xl font-bold">Koleksi Kami</h1>
-    <div class="w-20 h-1.5 mt-4 bg-primary mx-auto"></div>
+    <div class="w-20 h-1.5 mt-4 bg-ternary mx-auto"></div>
     <div class="mx-auto mt-10 w-9/12 p-5 flex gap-6 justify-center flex-wrap">
       <div class="w-72 h-36 bg-[#FC647B] rounded-2xl py-9">
         <h1 class="text-center text-4xl font-bold">531</h1>

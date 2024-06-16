@@ -1,7 +1,7 @@
 <template>
   <div class="flex h-[900px]">
     <div
-      class="sm:w-5/12 bg-primary mx-auto flex text-center sm:text-start justify-center items-center flex-col w-full"
+      class="sm:w-5/12 bg-ternary mx-auto flex text-center sm:text-start justify-center items-center flex-col w-full"
     >
       <div class="-mt-20">
         <img class="sm:mr-60 mb-2" src="@/assets/hero-siger.png" alt="" />
@@ -20,7 +20,7 @@
         </p>
       </div>
       <div>
-        <img class="mt-10 hover:scale-110" src="@/assets/down-arrow.png" alt="" />
+        <img class="mt-10 hover:scale-110 cursor-pointer" src="@/assets/down-arrow.png" alt="" />
       </div>
     </div>
     <div

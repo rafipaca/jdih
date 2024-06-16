@@ -2,17 +2,12 @@
   <div class="keputusan-home bg-primary p-10">
     <div class="flex gap-3 justify-center">
       <div
-        class="w-28 text-center text-white p-2 rounded-full border-2 hover:bg-secondary border-secondary"
-      >
+        class="text-center text-white px-6 py-3 rounded-full border-2 hover:bg-secondary border-secondary cursor-pointer">
         populer
       </div>
       <div
-        class="w-28 text-center text-white p-2 rounded-full border-2 hover:bg-secondary border-secondary"
-      >
+        class="text-center text-white px-6 py-3 rounded-full border-2 hover:bg-secondary border-secondary cursor-pointer">
         terbaru
-      </div>
-      <div class="w-full flex justify-center mt-10 mb-5">
-        <button class="bg-primary py-3 px-6 text-white rounded-full hover:bg-secondary">Lihat Semua</button>
       </div>
     </div>
     <div class="flex flex-col items-center sm:flex-row sm:flex-wrap gap-8 justify-center mt-10">
@@ -24,11 +19,17 @@
         class="document-item-custom"
       />
     </div>
+    <div class="w-full flex justify-center mt-10 mb-5">
+      <router-link to="/dokumen" class="bg-primary py-3 px-6 text-white rounded-full hover:bg-secondary">
+        Lihat Semua
+      </router-link>
+    </div>
   </div>
 </template>
 
 <script>
 import { ref, computed } from 'vue'
+import { useRouter } from 'vue-router'
 import { allDocuments } from '@/components/data.js'
 import DocumentItem from '@/components/document/DocumentItem.vue'
 
@@ -38,7 +39,8 @@ export default {
     DocumentItem
   },
   setup() {
-    const documents = allDocuments // Ambil data dokumen
+    const router = useRouter()
+    const documents = allDocuments
 
     // Computed property untuk mendapatkan 4 dokumen teratas berdasarkan views
     const topDocuments = computed(() => {
@@ -50,6 +52,7 @@ export default {
 
     const handleCardClick = (id) => {
       console.log('Card clicked, document id:', id)
+      router.push({ name: 'detailcard', params: { id } })
     }
 
     return {
@@ -63,7 +66,7 @@ export default {
 <style scoped>
 .keputusan-home .document-item-custom {
   width: 43%;
-  height: 17rem;
+  height: 14rem;
   /* background-color: #006859; */
   /* color: white; */
   border: 0;
@@ -79,10 +82,11 @@ export default {
 
 .keputusan-home .document-item-custom .btn-aja {
   background-color: #000;
+  /* margin-bottom: 2px; */
 }
 
 .keputusan-home .document-item-custom:hover {
-  background-color: #e0e0e0;
+  background-color: #9AD0C2;
   color: #000;
 }
 </style>
