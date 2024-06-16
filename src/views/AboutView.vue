@@ -13,7 +13,7 @@
         </ul>
       </div>
       <div class="text-4xl text-center mt-2 font-bold">Tentang Kami</div>
-      <div class="border-t-4 border-[#006859] w-[6%] mx-auto mb-2 mt-6"></div>
+      <div class="border-t-4 border-[#006859] w-[6%] mx-auto mb-5 mt-5"></div>
       <section class="flex flex-col lg:flex-row items-start justify-center py-2 px-4">
         <div class="text-center mb-8"></div>
         <div class="flex flex-col lg:flex-row items-start justify-center w-full">

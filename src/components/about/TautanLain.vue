@@ -14,7 +14,7 @@
         </div>
         <div class="flex items-center p-4 bg-gray-50 rounded-lg shadow-md">
           <img src="@/assets/logojdih.png" alt="Perpustakaan JDIH" class="w-10 h-10 mr-4" />
-          <a href="#" class="text-lg font-medium text-gray-700">Perpustakaan JDIH</a>
+          <a href="#" class="text-s font-medium text-gray-700">Perpustakaan JDIH</a>
         </div>
         <div class="flex items-center p-4 bg-gray-50 rounded-lg shadow-md">
           <img src="@/assets/logoplaystore.png" alt="Aplikasi Mobile" class="w-10 h-10 mr-4" />

@@ -1,17 +1,10 @@
 <template>
-<<<<<<< HEAD
-    <div class="keputusan-home bg-ternary p-10">
-      <div class="flex gap-3 justify-center">
-        <div class="w-28 text-center text-white p-2 rounded-full border-2 hover:bg-secondary border-secondary">populer</div>
-        <div class="w-28 text-center text-white p-2 rounded-full border-2 hover:bg-secondary border-secondary">terbaru</div>
-=======
   <div class="keputusan-home bg-primary p-10">
     <div class="flex gap-3 justify-center">
       <div
         class="w-28 text-center text-white p-2 rounded-full border-2 hover:bg-secondary border-secondary"
       >
         populer
->>>>>>> 357583beb68678067611d717d9ed88df3b2652c5
       </div>
       <div
         class="w-28 text-center text-white p-2 rounded-full border-2 hover:bg-secondary border-secondary"
