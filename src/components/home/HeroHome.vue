@@ -25,7 +25,11 @@
     </div>
     <div
       class="flex-auto h-full bg-black bg-fixed hidden sm:block"
-      style="background-image: url('src/assets/home-hero-5.png')"
+      :style="{ backgroundImage: `url(${homeHero5})` }"
     ></div>
   </div>
 </template>
+
+<script setup>
+  import homeHero5 from '@/assets/home-hero-5.png'
+</script>
