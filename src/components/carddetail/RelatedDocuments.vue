@@ -76,6 +76,7 @@ const limitedDocuments = computed(() => {
 })
 
 const handleClick = (id) => {
+  window.scrollTo(0, 0)
   router.push({ name: 'detailcard', params: { id } })
 }
 

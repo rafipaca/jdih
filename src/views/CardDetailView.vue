@@ -16,7 +16,7 @@
       </h2>
       <p class="text-center ml-25 mr-25 mt-10">{{ document.description }}</p>
       <div class="mt-20 text-center">
-        <button @click="handleDownload" class="bg-[#006859] btn text-white">unduh dokumen</button>
+        <button @click="handleDownload" class="bg-[#006859] btn text-white hover:bg-slate-300">Unduh Dokumen</button>
       </div>
       <div class="rounded-xl border shadow-lg m-8">
         <h1 class="text-center text-xl font-bold mt-4">Metadata</h1>
