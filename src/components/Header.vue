@@ -1,6 +1,12 @@
 <template>
-  <header class="bg-ternary text-white p-4">
-    <div class="container mx-auto flex justify-between items-center">
+  <header
+    :class="{
+      'bg-ternary text-white': !isScrolled,
+      'backdrop-blur-sm bg-white/30 text-primary': isScrolled
+    }"
+    class="p-4 sticky top-0 z-10 transition-colors duration-300"
+  >
+      <div class="container mx-auto flex justify-between items-center">
       <div class="flex items-center space-x-2">
         <a href="/">
           <img src="@/assets/siger.png" alt="JDIH Logo" class="h-8" />
@@ -38,8 +44,24 @@
 
 <script>
 export default {
-  name: 'HeaderComponent'
-}
+  name: 'HeaderComponent',
+  data() {
+    return {
+      isScrolled: false
+    };
+  },
+  mounted() {
+    window.addEventListener('scroll', this.onScroll);
+  },
+  beforeUnmount() {
+    window.removeEventListener('scroll', this.onScroll);
+  },
+  methods: {
+    onScroll() {
+      this.isScrolled = window.scrollY > 0;
+    }
+  }
+};
 </script>
 
 <style scoped>
