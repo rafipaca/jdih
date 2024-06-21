@@ -14,9 +14,26 @@
       <h2 class="italic text-center text-sm mb-2">
         dirilis pada {{ document.date }} {{ document.month }} {{ document.year }}
       </h2>
-      <p class="text-center ml-25 mr-25 mt-10">{{ document.description }}</p>
-      <div class="mt-20 text-center">
-        <button @click="handleDownload" class="bg-[#006859] btn text-white">unduh dokumen</button>
+      <p class="text-center font-normal mx-32 mt-10">{{ document.description }}</p>
+      
+      <!-- Added Metrics Section -->
+      <div class="flex justify-center mt-20">
+        <div class="mx-2 text-center">
+          <i class="material-icons">event</i> <!-- icon for year -->
+          <span>{{ document.year }}</span>
+        </div>
+        <div class="mx-2 text-center">
+          <i class="material-icons">download</i> <!-- icon for download -->
+          <span>{{ document.downloads }}</span>
+        </div>
+        <div class="mx-2 text-center">
+          <i class="material-icons">visibility</i> <!-- icon for views -->
+          <span>{{ document.views }}</span>
+        </div>
+      </div>
+      
+      <div class="mt-4 text-center">
+        <button @click="handleDownload" class="bg-[#006859] btn text-white hover:bg-slate-300">Unduh Dokumen</button>
       </div>
       <div class="rounded-xl border shadow-lg m-8">
         <h1 class="text-center text-xl font-bold mt-4">Metadata</h1>
@@ -48,7 +65,6 @@ const route = useRoute()
 const documentId = ref(parseInt(route.params.id))
 const document = computed(() => allDocuments.value.find((doc) => doc.id === documentId.value))
 
-// Watch for changes in route.params.id
 watch(
   () => route.params.id,
   (newId) => {
@@ -56,10 +72,8 @@ watch(
   }
 )
 
-// Define breadcrumbs
 const breadcrumbs = ref([{ text: 'Documents', url: '/dokumen' }])
 
-// Handle download
 const handleDownload = () => {
   if (document.value && document.value.link) {
     window.open(document.value.link, '_blank')
@@ -70,5 +84,8 @@ const handleDownload = () => {
 </script>
 
 <style scoped>
-/* Tambahkan gaya sesuai kebutuhan */
+.material-icons {
+  font-size: 24px; /* Icon size */
+  vertical-align: middle;
+}
 </style>

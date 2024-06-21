@@ -85,4 +85,22 @@ td {
 .list-inside {
   list-style-position: inside;
 }
+
+.custom-header {
+  background-color: #BAB9B9;
+  text-align: center;
+}
+
+.custom-isi {
+  text-align: justify;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.custom-header-sub {
+  background-color: #E5E5E5;
+  text-align: center;
+}
 </style>

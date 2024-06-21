@@ -66,7 +66,8 @@ export default {
   },
   methods: {
     handleClick() {
-      this.$emit('card-click', this.document.id)
+      window.scrollTo(0, 0)
+      this.$emit('card-click', this.document.id)  
     },
     handleDownload(event) {
       event.stopPropagation(); // Stop event propagation manually

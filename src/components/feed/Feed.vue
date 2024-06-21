@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-3 gap-8 p-8 ml-28">
+  <div class="ml-10 feed-container grid">
     <FeedItem
       v-for="(item, index) in items"
       :key="index"
@@ -79,9 +79,20 @@ export default {
 </script>
 
 <style scoped>
+
+.feed-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  margin: 15px;
+  /* Gaya lainnya untuk kartu */
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
 }
 </style>

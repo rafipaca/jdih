@@ -6,10 +6,18 @@
         Silakan kunjungi media sosial kami untuk mengetahui kegiatan JDIH terkini
       </p>
       <div class="flex gap-7 mt-5 justify-center sm:justify-start">
-        <img class="" loading="lazy" alt="" src="/src/assets/facebook.png" />
-        <img class="" loading="lazy" alt="" src="/src/assets/twitter.png" />
-        <img class="" loading="lazy" alt="" src="/src/assets/instagram.png" />
-        <img class="" loading="lazy" alt="" src="/src/assets/youtube.png" />
+        <a href="https://www.facebook.com/jdihprovlampung" target="_blank">
+          <img class="hover:invert transition duration-200 ease-in-out" loading="lazy" alt="Facebook" src="/src/assets/facebook.png" />
+        </a>
+        <a href="https://twitter.com/jdihlampung" target="_blank">
+          <img class="hover:hover:invert transition duration-200 ease-in-out" loading="lazy" alt="Twitter" src="/src/assets/twitter.png" />
+        </a>
+        <a href="https://www.instagram.com/jdihprovlampung/" target="_blank">
+          <img class="hover:invert transition duration-200 ease-in-out" loading="lazy" alt="Instagram" src="/src/assets/instagram.png" />
+        </a>
+        <a href="https://www.youtube.com/@jdihprovinsilampung1693" target="_blank">
+          <img class="hover:invert transition duration-200 ease-in-out" loading="lazy" alt="YouTube" src="/src/assets/youtube.png" />
+        </a>  
       </div>
     </div>
 

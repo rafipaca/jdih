@@ -16,6 +16,7 @@
         <SidebarCheckbox
           class="w-full lg:w-1/4 mb-4 lg:mb-0"
           :filters="availableFilters"
+          :documentCounts="documentCounts"
           @filter-change="handleFilterChange"
         />
         <!-- Section 2: Document Filter and List -->
@@ -53,7 +54,7 @@ import { allDocuments } from '../components/data'
 const filteredDocuments = ref([...allDocuments.value])
 const currentPage = ref(1)
 const pageSize = 5
-const isLoading = ref(false) // Tambahkan state untuk loading
+const isLoading = ref(false)
 const router = useRouter()
 const breadcrumbs = ref([{ text: 'Documents', url: '/dokumen' }])
 
@@ -81,7 +82,6 @@ const availableFilters = ref([
       { value: 17, label: 'Dokumen Langka' }
     ]
   }
-  // Tambahkan filter lain jika diperlukan...
 ])
 
 const resultCount = ref(0)
@@ -95,9 +95,17 @@ const paginatedDocuments = computed(() => {
 
 const totalPages = computed(() => Math.ceil(filteredDocuments.value.length / pageSize))
 
+const documentCounts = computed(() => {
+  const counts = {}
+  allDocuments.value.forEach(doc => {
+    counts[doc.kategori] = (counts[doc.kategori] || 0) + 1
+  })
+  return counts
+})
+
 const handleSearch = (searchTerms) => {
-  isLoading.value = true // Start loading
-  const startTime = performance.now() // Start timing the search
+  isLoading.value = true
+  const startTime = performance.now()
   const titleKeywords = searchTerms.title ? searchTerms.title.toLowerCase().split(' ') : []
 
   filteredDocuments.value = allDocuments.value.filter((doc) => {
@@ -109,17 +117,17 @@ const handleSearch = (searchTerms) => {
     return matchesTitle && matchesNumber && matchesYear
   })
 
-  const endTime = performance.now() // End timing the search
-  let actualSearchTime = ((endTime - startTime) / 1000) // Calculate time in seconds
-  searchTime.value = (actualSearchTime + 0.05).toFixed(2) // Add 0.05 seconds to the actual search time
-  resultCount.value = filteredDocuments.value.length // Update result count
-  currentPage.value = 1 // Reset to the first page after search
-  isLoading.value = false // End loading
+  const endTime = performance.now()
+  const actualSearchTime = ((endTime - startTime) / 1000).toFixed(2)
+  searchTime.value = actualSearchTime
+  resultCount.value = filteredDocuments.value.length
+  currentPage.value = 1
+  isLoading.value = false
 }
 
 const handleFilterChange = (selectedFilters) => {
-  isLoading.value = true // Start loading
-  const startTime = performance.now() // Start timing the search
+  isLoading.value = true
+  const startTime = performance.now()
 
   if (selectedFilters.kategori.includes('all')) {
     filteredDocuments.value = [...allDocuments.value]
@@ -131,12 +139,12 @@ const handleFilterChange = (selectedFilters) => {
     })
   }
 
-  const endTime = performance.now() // End timing the search
-  let actualFilterTime = ((endTime - startTime) / 1000) // Calculate time in seconds
-  searchTime.value = (actualFilterTime + 0.05).toFixed(2) // Add 0.05 seconds to the actual filter time
-  resultCount.value = filteredDocuments.value.length // Update result count
-  currentPage.value = 1 // Reset to the first page after filtering
-  isLoading.value = false // End loading
+  const endTime = performance.now()
+  const actualFilterTime = ((endTime - startTime) / 1000).toFixed(2)
+  searchTime.value = actualFilterTime
+  resultCount.value = filteredDocuments.value.length
+  currentPage.value = 1
+  isLoading.value = false
 }
 
 const handlePageChange = (page) => {
@@ -148,14 +156,10 @@ const goToDetail = (id) => {
 }
 
 onMounted(() => {
-  const startTime = performance.now() // Start timing the initial load
-  handleFilterChange({ kategori: [] }) // Initialize with default filters
-  const endTime = performance.now() // End timing the initial load
-  let actualLoadTime = ((endTime - startTime) / 1000) // Calculate time in seconds
-  searchTime.value = (actualLoadTime + 0.05).toFixed(2) // Add 0.05 seconds to the actual load time
+  const startTime = performance.now()
+  handleFilterChange({ kategori: [] })
+  const endTime = performance.now()
+  const actualLoadTime = ((endTime - startTime) / 1000).toFixed(2)
+  searchTime.value = actualLoadTime
 })
 </script>
-
-<style scoped>
-/* Tambahkan gaya sesuai kebutuhan */
-</style>
