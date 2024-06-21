@@ -1,6 +1,6 @@
 <template>
-  <DecorContainer>
-    <div class="p-4 mt-8 w-[70%]">
+  <component :is="currentContainer">
+    <div class="p-4 mt-8 w-[90%] sm:w-[70%]">
       <div class="text-sm italic font-light flex justify-center text-[#2D9596]">
         <ul class="flex items-center">
           <li v-for="(crumb, index) in breadcrumbs" :key="index" class="flex items-center">
@@ -14,10 +14,10 @@
       <h2 class="italic text-center text-sm mb-2">
         dirilis pada {{ document.date }} {{ document.month }} {{ document.year }}
       </h2>
-      <p class="text-center font-normal mx-32 mt-10">{{ document.description }}</p>
+      <p class="text-center font-normal sm:mx-32 mt-5 sm:mt-10">{{ document.description }}</p>
       
       <!-- Added Metrics Section -->
-      <div class="flex justify-center mt-20">
+      <div class="flex justify-center mt-5 sm:mt-20">
         <div class="mx-2 text-center">
           <i class="material-icons">event</i> <!-- icon for year -->
           <span>{{ document.year }}</span>
@@ -35,9 +35,9 @@
       <div class="mt-4 text-center">
         <button @click="handleDownload" class="bg-[#006859] btn text-white hover:bg-slate-300">Unduh Dokumen</button>
       </div>
-      <div class="rounded-xl border shadow-lg m-8">
-        <h1 class="text-center text-xl font-bold mt-4">Metadata</h1>
-        <div class="mt-6 mr-20 mb-14 ml-20">
+      <div class="rounded-xl border shadow-lg mt-8 sm:m-8">
+        <h1 class="text-center text-xl font-bold my-4 sm:mt-4">Metadata</h1>
+        <div class="sm:mt-6 sm:mr-20 sm:mb-14 sm:ml-20">
           <MetadataSection :document="document" />
         </div>
       </div>
@@ -50,15 +50,16 @@
         >
       </div>
     </div>
-  </DecorContainer>
+  </component>
 </template>
 
 <script setup>
-import { ref, computed, watch } from 'vue'
+import { ref, computed, onMounted, onUnmounted, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { allDocuments } from '../components/data'
 import MetadataSection from '../components/carddetail/MetadataSection.vue'
 import RelatedDocuments from '../components/carddetail/RelatedDocuments.vue'
+import DecorResponsive from '../components/document/DecorResponsive.vue'
 import DecorContainer from '../components/DecorContainer.vue'
 
 const route = useRoute()
@@ -81,6 +82,21 @@ const handleDownload = () => {
     console.log('No download link available for this document')
   }
 }
+
+const isMobile = ref(window.innerWidth <= 768)
+const currentContainer = computed(() => (isMobile.value ? DecorResponsive : DecorContainer))
+
+const handleResize = () => {
+  isMobile.value = window.innerWidth <= 768
+}
+
+onMounted(() => {
+  window.addEventListener('resize', handleResize)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('resize', handleResize)
+})
 </script>
 
 <style scoped>
