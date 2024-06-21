@@ -11,34 +11,58 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: HomeView,
+      meta: {
+        title: 'Home - JDIH Lampung'
+      }
     },
     {
       path: '/about',
       name: 'about',
-      component: () => import('../views/AboutView.vue')
+      component: () => import('../views/AboutView.vue'),
+      meta: {
+        title: 'About - JDIH Lampung'
+      }
     },
     {
       path: '/dokumen',
       name: 'document',
-      component: DocView
+      component: DocView,
+      meta: {
+        title: 'Dokumen - JDIH Lampung'
+      }
     },
     {
       path: '/dokumen/cardview/:id',
       name: 'detailcard',
-      component: CardDetailView
+      component: CardDetailView,
+      meta: {
+        title: 'Detail Dokumen - JDIH Lampung'
+      }
     },
     {
       path: '/feed',
       name: 'Feed',
-      component: FeedView
+      component: FeedView,
+      meta: {
+        title: 'Feed - JDIH Lampung'
+      }
     },
     {
       path: '/feed-detail',
       name: 'feed-detail',
-      component: FeedDetailView
+      component: FeedDetailView,
+      meta: {
+        title: 'Feed Detail - JDIH Lampung'
+      }
     }
   ]
 })
+
+// Set document title based on route meta
+router.beforeEach((to, from, next) => {
+  document.title = to.meta.title || 'JDIH Lampung';
+  next();
+});
 
 export default router
