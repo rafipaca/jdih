@@ -1,5 +1,5 @@
 <template>
-  <DecorContainer>
+  <component :is="currentContainer">
     <div class="content p-4 w-full lg:w-[70%] mx-auto">
       <div class="text-sm italic font-light flex justify-left mb-5 text-[#2D9596]">
         <ul class="flex">
@@ -17,6 +17,8 @@
           class="w-full lg:w-1/4 mb-4 lg:mb-0"
           :filters="availableFilters"
           :documentCounts="documentCounts"
+          :resultCount="resultCount"
+          :searchTime="searchTime"
           @filter-change="handleFilterChange"
         />
         <!-- Section 2: Document Filter and List -->
@@ -37,11 +39,11 @@
       <!-- Tambahkan komponen LoadingSpinner -->
       <LoadingSpinner v-if="isLoading" />
     </div>
-  </DecorContainer>
+  </component>
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'
 import DocumentFilter from '../components/document/DocumentFilter.vue'
 import DocumentList from '../components/document/DocumentList.vue'
@@ -49,6 +51,7 @@ import SidebarCheckbox from '../components/document/SidebarCheckbox.vue'
 import Pagination from '../components/document/Pagination.vue'
 import DecorContainer from '../components/DecorContainer.vue'
 import LoadingSpinner from '../components/LoadingSpinner.vue'
+import DecorResponsive from '../components/document/DecorResponsive.vue'
 import { allDocuments } from '../components/data'
 
 const filteredDocuments = ref([...allDocuments.value])
@@ -155,11 +158,23 @@ const goToDetail = (id) => {
   router.push({ name: 'detailcard', params: { id } })
 }
 
+const isMobile = ref(window.innerWidth <= 1280)
+const currentContainer = computed(() => (isMobile.value ? DecorResponsive : DecorContainer))
+
+const handleResize = () => {
+  isMobile.value = window.innerWidth <= 1280
+}
+
 onMounted(() => {
+  window.addEventListener('resize', handleResize)
   const startTime = performance.now()
   handleFilterChange({ kategori: [] })
   const endTime = performance.now()
   const actualLoadTime = ((endTime - startTime) / 1000).toFixed(2)
   searchTime.value = actualLoadTime
+})
+
+onUnmounted(() => {
+  window.removeEventListener('resize', handleResize)
 })
 </script>

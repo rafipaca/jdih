@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h3 class="font-bold mb-2">Kategori</h3>
+  <div class="sidebar-checkbox">
+    <h3 class="font-bold mb-2">Filter Kategori</h3>
     <div class="filter-group" v-for="filter in filters" :key="filter.name">
       <div @click="clickShowAll">
         <input type="checkbox" :checked="isShowAll" />
@@ -19,6 +19,9 @@
         </label>
       </div>
     </div>
+    <div class="block md:hidden text-sm font-bold mb-5">
+      <p>Menampilkan {{ resultCount }} hasil temuan ({{ searchTime }} detik)</p>
+    </div>
   </div>
 </template>
 
@@ -33,6 +36,14 @@ export default {
     documentCounts: {
       type: Object,
       required: true
+    },
+    resultCount: {
+      type: Number,
+      required: true
+    },
+    searchTime: {
+      type: Number,
+      required: true
     }
   },
   data() {
@@ -46,8 +57,8 @@ export default {
   methods: {
     clickShowAll() {
       this.isShowAll = !this.isShowAll
-      this.filters.map((filter) => {
-        filter.options.map((option) => {
+      this.filters.forEach((filter) => {
+        filter.options.forEach((option) => {
           const isChecked = this.selectedFilters[filter.name].indexOf(option.value) !== -1
           if (this.isShowAll) {
             if (!isChecked) {
@@ -84,9 +95,6 @@ export default {
 </script>
 
 <style scoped>
-.sidebar-checkbox {
-  padding: 1rem;
-}
 .filter-group {
   margin-bottom: 1rem;
 }

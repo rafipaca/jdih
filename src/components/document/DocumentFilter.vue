@@ -63,7 +63,7 @@
       </div>
     </div>
     <!-- Tampilkan jumlah hasil dan waktu pencarian -->
-    <div class="my-6 text-sm">
+    <div class="hidden md:block my-6 text-sm">
       <p>Menampilkan {{ resultCount }} hasil temuan ({{ searchTime }} detik)</p>
     </div>
   </div>
