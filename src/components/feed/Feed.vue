@@ -1,5 +1,5 @@
 <template>
-  <div class="ml-10 feed-container grid">
+  <div class="feed-container max-w-screen-lg mx-auto">
     <FeedItem
       v-for="(item, index) in items"
       :key="index"
@@ -66,7 +66,7 @@ export default {
           image: new URL('@/assets/Rectangle 42.png', import.meta.url).href,
           date: '2 Mei 2024',
           title: 'Pelantikan PJ Bupati Tulang Bawang Barat Dan Pengukuhan Kembali PJ Bupati Pringsewu Dan Mesuji'
-        },
+        }
       ]
     }
   },
@@ -79,20 +79,29 @@ export default {
 </script>
 
 <style scoped>
-
 .feed-container {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  padding: 24px;
   justify-content: center;
 }
 
-.card {
-  margin: 15px;
-  /* Gaya lainnya untuk kartu */
+@media (min-width: 1200px) {
+  .feed-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 kolom pada layar besar */
+  }
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+@media (min-width: 768px) and (max-width: 1199px) {
+  .feed-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 kolom pada layar sedang */
+  }
+}
+
+@media (max-width: 767px) {
+  .feed-container {
+    grid-template-columns: 1fr; /* 1 kolom pada layar kecil */
+  }
 }
 </style>
