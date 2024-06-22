@@ -1,7 +1,7 @@
 <template>
   <DecorFeed>
-    <div class="container mx-auto mt-8 grid grid-cols-3 gap-8">
-      <div class="col-span-2">
+    <div class="container mx-auto mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="md:col-span-2">
         <div class="bg-white p-8 rounded shadow">
           <nav class="text-sm mb-4 text-gray-600">
             <router-link to="/feed-detail" class="text-blue-500 hover:underline">Feed / Detail Feed</router-link>
@@ -11,27 +11,26 @@
           <img src="@/assets/Hari Kebangkitan.png" alt="Kebangkitan Nasional" class="mb-4 w-full" />
         </div>
       </div>
-      <FeedSidebar />
+      <FeedSidebar class="md:col-span-1" />
     </div>
   </DecorFeed>
-  </template>
-  
-  <script>
-  import DecorFeed from '@/components/feed/DecorFeed.vue';
-  import FeedSidebar from '@/components/feed/FeedSidebar.vue'
-  
-  export default {
-    name: 'FeedDetailView',
-    components: {
-      FeedSidebar,
-      DecorFeed
-    }
+</template>
+
+<script>
+import DecorFeed from '@/components/feed/DecorFeed.vue';
+import FeedSidebar from '@/components/feed/FeedSidebar.vue'
+
+export default {
+  name: 'FeedDetailView',
+  components: {
+    FeedSidebar,
+    DecorFeed
   }
-  </script>
-  
-  <style scoped>
-  .container {
-    max-width: 1200px;
-  }
-  </style>
-  
+}
+</script>
+
+<style scoped>
+.container {
+  max-width: 1200px;
+}
+</style>
