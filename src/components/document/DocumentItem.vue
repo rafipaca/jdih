@@ -16,7 +16,7 @@
     </div>
     <div class="sm:hidden w-2/6 sm:h-0.5 sm:mt-4 sm:-mb-3  bg-primary rounded"></div>
     <!-- Right section for the content (5/6 of the card) -->
-    <div class="card-body justify-center text-center sm:text-left w-full">
+    <div class="card-body justify-center mt-8 text-center sm:text-left w-full">
       <h2 class="card-title">{{ document.title }}</h2>
       <p class="text-sm">{{ truncatedDescription }}</p>
       <div class="relative card-actions justify-center mt-4 my-5 my-0 sm:justify-end">
@@ -27,7 +27,7 @@
           Unduh
         </button>
       </div>
-      <div class="hidden sm:block sm:flex items-center gap-2 justify-center sm:justify-start sm:-mt-12 text-gray-600">
+      <div class="hidden sm:block sm:flex items-center gap-2 justify-center sm:justify-start sm:-mt-14 text-gray-600">
         <div class="flex items-center">
           <span class="material-icons">event</span>
           <span class="ml-1">{{ document.year }}</span>
