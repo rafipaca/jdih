@@ -38,7 +38,7 @@
         <button @click="toggleMobileMenu" class="focus:outline-none">
           <svg
             :class="{ 'hidden': isMobileMenuOpen, 'block': !isMobileMenuOpen }"
-            class="w-8 h-8 mt-1.5 sm:mt-0"
+            class="w-7 h-7 mt-1.5 sm:mt-0"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -53,7 +53,7 @@
           </svg>
           <svg
             :class="{ 'block': isMobileMenuOpen, 'hidden': !isMobileMenuOpen }"
-            class="w-6 h-6"
+            class="w-7 h-7 mt-1.5 sm:mt-0"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
