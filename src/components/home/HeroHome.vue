@@ -20,7 +20,12 @@
         </p>
       </div>
       <div>
-        <img class="mt-10 hover:scale-110 cursor-pointer" src="@/assets/down-arrow.png" alt="" />
+        <img
+          class="mt-10 hover:scale-110 cursor-pointer"
+          src="@/assets/down-arrow.png"
+          alt=""
+          @click="scrollDown"
+        />
       </div>
     </div>
     <div
@@ -31,5 +36,18 @@
 </template>
 
 <script setup>
-  import homeHero5 from '@/assets/home-hero-5.png'
+import { ref } from 'vue'
+import homeHero5 from '@/assets/home-hero-5.png'
+
+// Function to scroll down
+const scrollDown = () => {
+  window.scroll({
+    top: window.innerHeight, // Adjust this value to scroll to a specific position
+    behavior: 'smooth'
+  })
+}
 </script>
+
+<style scoped>
+/* Add any additional styles if needed */
+</style>
