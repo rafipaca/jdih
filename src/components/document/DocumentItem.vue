@@ -57,7 +57,7 @@ export default {
   computed: {
     truncatedDescription() {
       const words = this.document.description.split(' ')
-      const maxWords = 30 // Change this value to set the limit of words
+      const maxWords = 20 // Change this value to set the limit of words
       if (words.length > maxWords) {
         return words.slice(0, maxWords).join(' ') + '...'
       }
