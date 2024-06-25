@@ -2,31 +2,37 @@
   <div>
     <!-- Div pertama -->
     <div class="flex flex-col gap-4 p-4 bg-white rounded-lg custom-shadow mb-8">
-    <h2 class="text-2xl font-semibold text-center text-teal-500">Tautan Lain</h2>
-    <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
-        <div class="flex items-center p-4 bg-gray-50 rounded-lg shadow-md">
-          <img src="@/assets/logojdih.png" alt="Portal JDIHN" class="w-10 h-10 mr-4" />
-          <a href="#" class="text-lg font-medium text-gray-700">Portal JDIHN</a>
-        </div>
-        <div class="flex items-center p-4 bg-gray-50 rounded-lg shadow-md">
-          <img src="@/assets/logoppid.png" alt="Portal PPID" class="w-10 h-10 mr-4" />
-          <a href="#" class="text-lg font-medium text-gray-700">Portal PPID</a>
-        </div>
-        <div class="flex items-center p-4 bg-gray-50 rounded-lg shadow-md">
-          <img src="@/assets/logojdih.png" alt="Perpustakaan JDIH" class="w-10 h-10 mr-4" />
-          <a href="#" class="text-s font-medium text-gray-700">Perpustakaan JDIH</a>
-        </div>
-        <div class="flex items-center p-4 bg-gray-50 rounded-lg shadow-md">
-          <img src="@/assets/logoplaystore.png" alt="Aplikasi Mobile" class="w-10 h-10 mr-4" />
-          <a href="#" class="text-lg font-medium text-gray-700">Aplikasi Mobile</a>
-        </div>
+      <div class="flex flex-col my-2 border-white rounded-lg p-4">
+        <div class="border-gray-100 border-2 rounded-xl px-8 py-5">
+        <h2 class="text-2xl font-semibold text-center warna-font mb-5 -mt-9 bg-white px-2 mx-auto w-fit">Tautan Lain</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-4">
+                    <div class="flex items-center p-4 bg-gray-50 rounded-lg shadow-md">
+                    <img src="@/assets/logojdih.png" alt="Portal JDIHN" class="w-10 h-10 mr-4" />
+                    <a href="https://jdihn.go.id/" target="_blank" class="text-lg font-medium text-gray-700">Portal JDIHN</a>
+                    </div>
+                    <div class="flex items-center p-4 bg-gray-50 rounded-lg shadow-md">
+                    <img src="@/assets/logoppid.png" alt="Portal PPID" class="w-10 h-10 mr-4" />
+                    <a href="https://www.ppid.lampungprov.go.id/" target="_blank" class="text-lg font-medium text-gray-700">Portal PPID</a>
+                    </div>
+                    <div class="flex items-center p-4 bg-gray-50 rounded-lg shadow-md">
+                    <img src="@/assets/logojdih.png" alt="Perpustakaan JDIH" class="w-10 h-10 mr-4" />
+                    <a href="https://jdih.lampungprov.go.id/katalog-buku" target="_blank" class="text-lg font-medium text-gray-700">Perpustakaan JDIH</a>
+                    </div>
+                    <div class="flex items-center p-4 bg-gray-50 rounded-lg shadow-md">
+                    <img src="@/assets/logoplaystore.png" alt="Aplikasi Mobile" class="w-10 h-10 mr-4" />
+                    <a href="https://play.google.com/store/apps/details?id=com.blondev.jdihlampung&hl=en_US&gl=US&pli=1" target="_blank" class="text-lg font-medium text-gray-700">Aplikasi Mobile</a>
+                    </div>
+                </div>
+  </div>
     </div>
 
     </div>
 
     <!-- Div kedua -->
     <div class="flex flex-col gap-4 p-4 bg-white rounded-lg custom-shadow">
-      <h2 class="text-xl font-semibold text-center text-teal-500">
+      <div class="flex flex-col my-2 border-white rounded-lg p-4">
+        <div class="border-gray-100 border-2 rounded-xl px-8 py-5">
+        <h2 class="text-2xl font-semibold text-center warna-font mb-5 -mt-9 bg-white px-2 mx-auto w-fit">
         Anggota JDIH Provinsi Lampung
       </h2>
       <div class="overflow-y-auto max-h-64">
@@ -45,7 +51,7 @@
               <td class="border px-4 py-2">
                 <a
                   href="http://jdih.bandarlampungkota.go.id"
-                  class="text-teal-500 hover:underline"
+                  class="warna-font hover:underline"
                   target="_blank"
                   >jdih.bandarlampungkota.go.id</a
                 >
@@ -57,7 +63,7 @@
               <td class="border px-4 py-2">
                 <a
                   href="http://jdih.metrokota.go.id"
-                  class="text-teal-500 hover:underline"
+                  class="warna-font hover:underline"
                   target="_blank"
                   >jdih.metrokota.go.id</a
                 >
@@ -69,7 +75,7 @@
               <td class="border px-4 py-2">
                 <a
                   href="http://jdih.lampungselatankab.go.id"
-                  class="text-teal-500 hover:underline"
+                  class="warna-font hover:underline"
                   target="_blank"
                   >jdih.lampungselatankab.go.id</a
                 >
@@ -81,7 +87,7 @@
               <td class="border px-4 py-2">
                 <a
                   href="http://jdih.lampungtengahkab.go.id"
-                  class="text-teal-500 hover:underline"
+                  class="warna-font hover:underline"
                   target="_blank"
                   >jdih.lampungtengahkab.go.id</a
                 >
@@ -93,7 +99,7 @@
               <td class="border px-4 py-2">
                 <a
                   href="http://jdih.lampungutarakab.go.id"
-                  class="text-teal-500 hover:underline"
+                  class="warna-font hover:underline"
                   target="_blank"
                   >jdih.lampungutarakab.go.id</a
                 >
@@ -105,7 +111,7 @@
               <td class="border px-4 py-2">
                 <a
                   href="http://jdih.lampungbaratkab.go.id"
-                  class="text-teal-500 hover:underline"
+                  class="warna-font hover:underline"
                   target="_blank"
                   >jdih.lampungbaratkab.go.id</a
                 >
@@ -117,7 +123,7 @@
               <td class="border px-4 py-2">
                 <a
                   href="http://jdih.lampungtimurkab.go.id"
-                  class="text-teal-500 hover:underline"
+                  class="warna-font hover:underline"
                   target="_blank"
                   >jdih.lampungtimurkab.go.id</a
                 >
@@ -129,7 +135,7 @@
               <td class="border px-4 py-2">
                 <a
                   href="http://jdih.tulangbawangkab.go.id"
-                  class="text-teal-500 hover:underline"
+                  class="warna-font hover:underline"
                   target="_blank"
                   >jdih.tulangbawangkab.go.id</a
                 >
@@ -141,7 +147,7 @@
               <td class="border px-4 py-2">
                 <a
                   href="http://jdih.tulangbawangbaratkab.go.id"
-                  class="text-teal-500 hover:underline"
+                  class="warna-font hover:underline"
                   target="_blank"
                   >jdih.tulangbawangbaratkab.go.id</a
                 >
@@ -153,7 +159,7 @@
               <td class="border px-4 py-2">
                 <a
                   href="http://jdih.tanggamuskab.go.id"
-                  class="text-teal-500 hover:underline"
+                  class="warna-font hover:underline"
                   target="_blank"
                   >jdih.tanggamuskab.go.id</a
                 >
@@ -165,7 +171,7 @@
               <td class="border px-4 py-2">
                 <a
                   href="http://jdih.waykanankab.go.id"
-                  class="text-teal-500 hover:underline"
+                  class="warna-font hover:underline"
                   target="_blank"
                   >jdih.waykanankab.go.id</a
                 >
@@ -177,7 +183,7 @@
               <td class="border px-4 py-2">
                 <a
                   href="http://jdih.pesisirbaratkab.go.id"
-                  class="text-teal-500 hover:underline"
+                  class="warna-font hover:underline"
                   target="_blank"
                   >jdih.pesisirbaratkab.go.id</a
                 >
@@ -189,7 +195,7 @@
               <td class="border px-4 py-2">
                 <a
                   href="http://jdih.mesujikab.go.id"
-                  class="text-teal-500 hover:underline"
+                  class="warna-font hover:underline"
                   target="_blank"
                   >jdih.mesujikab.go.id</a
                 >
@@ -201,7 +207,7 @@
               <td class="border px-4 py-2">
                 <a
                   href="http://jdih.pringsewukab.go.id"
-                  class="text-teal-500 hover:underline"
+                  class="warna-font hover:underline"
                   target="_blank"
                   >jdih.pringsewukab.go.id</a
                 >
@@ -213,7 +219,7 @@
               <td class="border px-4 py-2">
                 <a
                   href="http://jdih.pesawarankab.go.id"
-                  class="text-teal-500 hover:underline"
+                  class="warna-font hover:underline"
                   target="_blank"
                   >jdih.pesawarankab.go.id</a
                 >
@@ -225,7 +231,7 @@
               <td class="border px-4 py-2">
                 <a
                   href="http://jdih.setwan-dprd.lampungprov.go.id"
-                  class="text-teal-500 hover:underline"
+                  class="warna-font hover:underline"
                   target="_blank"
                   >jdih.setwan-dprd.lampungprov.go.id</a
                 >
@@ -237,7 +243,7 @@
               <td class="border px-4 py-2">
                 <a
                   href="https://jdih.bandarlampungkota.go.id"
-                  class="text-teal-500 hover:underline"
+                  class="warna-font hover:underline"
                   target="_blank"
                   >jdih.bandarlampungkota.go.id</a
                 >
@@ -249,7 +255,7 @@
               <td class="border px-4 py-2">
                 <a
                   href="http://jdih-drpd.metrokota.go.id"
-                  class="text-teal-500 hover:underline"
+                  class="warna-font hover:underline"
                   target="_blank"
                   >jdih-drpd.metrokota.go.id</a
                 >
@@ -261,7 +267,7 @@
               <td class="border px-4 py-2">
                 <a
                   href="http://jdih-drpd.lampungselatankab.go.id"
-                  class="text-teal-500 hover:underline"
+                  class="warna-font hover:underline"
                   target="_blank"
                   >jdih-drpd.lampungselatankab.go.id</a
                 >
@@ -273,7 +279,7 @@
               <td class="border px-4 py-2">
                 <a
                   href="http://jdih-drpd.lampungtengahkab.go.id"
-                  class="text-teal-500 hover:underline"
+                  class="warna-font hover:underline"
                   target="_blank"
                   >jdih-drpd.lampungtengahkab.go.id</a
                 >
@@ -285,7 +291,7 @@
               <td class="border px-4 py-2">
                 <a
                   href="http://jdih-drpd.lampungutarakab.go.id"
-                  class="text-teal-500 hover:underline"
+                  class="warna-font hover:underline"
                   target="_blank"
                   >jdih-drpd.lampungutarakab.go.id</a
                 >
@@ -297,7 +303,7 @@
               <td class="border px-4 py-2">
                 <a
                   href="http://jdih-drpd.lampungbaratkab.go.id"
-                  class="text-teal-500 hover:underline"
+                  class="warna-font hover:underline"
                   target="_blank"
                   >jdih-drpd.lampungbaratkab.go.id</a
                 >
@@ -309,7 +315,7 @@
               <td class="border px-4 py-2">
                 <a
                   href="http://jdih-drpd.lampungtimurkab.go.id"
-                  class="text-teal-500 hover:underline"
+                  class="warna-font hover:underline"
                   target="_blank"
                   >jdih-drpd.lampungtimurkab.go.id</a
                 >
@@ -321,7 +327,7 @@
               <td class="border px-4 py-2">
                 <a
                   href="http://jdih-drpd.tulangbawangkab.go.id"
-                  class="text-teal-500 hover:underline"
+                  class="warna-font hover:underline"
                   target="_blank"
                   >jdih-drpd.tulangbawangkab.go.id</a
                 >
@@ -333,7 +339,7 @@
               <td class="border px-4 py-2">
                 <a
                   href="http://jdih-drpd.tulangbawangbaratkab.go.id"
-                  class="text-teal-500 hover:underline"
+                  class="warna-font hover:underline"
                   target="_blank"
                   >jdih-drpd.tulangbawangbaratkab.go.id</a
                 >
@@ -345,7 +351,7 @@
               <td class="border px-4 py-2">
                 <a
                   href="http://jdih-drpd.tanggamuskab.go.id"
-                  class="text-teal-500 hover:underline"
+                  class="warna-font hover:underline"
                   target="_blank"
                   >jdih-drpd.tanggamuskab.go.id</a
                 >
@@ -357,7 +363,7 @@
               <td class="border px-4 py-2">
                 <a
                   href="http://jdih-drpd.waykanankab.go.id"
-                  class="text-teal-500 hover:underline"
+                  class="warna-font hover:underline"
                   target="_blank"
                   >jdih-drpd.waykanankab.go.id</a
                 >
@@ -369,7 +375,7 @@
               <td class="border px-4 py-2">
                 <a
                   href="http://jdih-drpd.pesisirbaratkab.go.id"
-                  class="text-teal-500 hover:underline"
+                  class="warna-font hover:underline"
                   target="_blank"
                   >jdih-drpd.pesisirbaratkab.go.id</a
                 >
@@ -381,7 +387,7 @@
               <td class="border px-4 py-2">
                 <a
                   href="http://jdih-drpd.mesujikab.go.id"
-                  class="text-teal-500 hover:underline"
+                  class="warna-font hover:underline"
                   target="_blank"
                   >jdih-drpd.mesujikab.go.id</a
                 >
@@ -393,7 +399,7 @@
               <td class="border px-4 py-2">
                 <a
                   href="http://jdih-drpd.pringsewukab.go.id"
-                  class="text-teal-500 hover:underline"
+                  class="warna-font hover:underline"
                   target="_blank"
                   >jdih-drpd.pringsewukab.go.id</a
                 >
@@ -405,7 +411,7 @@
               <td class="border px-4 py-2">
                 <a
                   href="http://jdih-drpd.pesawarankab.go.id"
-                  class="text-teal-500 hover:underline"
+                  class="warna-font hover:underline"
                   target="_blank"
                   >jdih-drpd.pesawarankab.go.id</a
                 >
@@ -417,7 +423,7 @@
               <td class="border px-4 py-2">
                 <a
                   href="http://jdih.umkalianda.ac.id"
-                  class="text-teal-500 hover:underline"
+                  class="warna-font hover:underline"
                   target="_blank"
                   >jdih.umkalianda.ac.id</a
                 >
@@ -429,7 +435,7 @@
               <td class="border px-4 py-2">
                 <a
                   href="http://jdih.umko.ac.id"
-                  class="text-teal-500 hover:underline"
+                  class="warna-font hover:underline"
                   target="_blank"
                   >jdih.umko.ac.id</a
                 >
@@ -441,7 +447,7 @@
               <td class="border px-4 py-2">
                 <a
                   href="http://jdih.ubl.ac.id"
-                  class="text-teal-500 hover:underline"
+                  class="warna-font hover:underline"
                   target="_blank"
                   >jdih.ubl.ac.id</a
                 >
@@ -453,7 +459,7 @@
               <td class="border px-4 py-2">
                 <a
                   href="http://jdih.unila.ac.id"
-                  class="text-teal-500 hover:underline"
+                  class="warna-font hover:underline"
                   target="_blank"
                   >jdih.unila.ac.id</a
                 >
@@ -465,7 +471,7 @@
               <td class="border px-4 py-2">
                 <a
                   href="http://jdih.malayahati.ac.id"
-                  class="text-teal-500 hover:underline"
+                  class="warna-font hover:underline"
                   target="_blank"
                   >jdih.malayahati.ac.id</a
                 >
@@ -477,7 +483,7 @@
               <td class="border px-4 py-2">
                 <a
                   href="http://jdih.uml.ac.id"
-                  class="text-teal-500 hover:underline"
+                  class="warna-font hover:underline"
                   target="_blank"
                   >jdih.uml.ac.id</a
                 >
@@ -489,7 +495,7 @@
               <td class="border px-4 py-2">
                 <a
                   href="http://jdih.ummetro.ac.id"
-                  class="text-teal-500 hover:underline"
+                  class="warna-font hover:underline"
                   target="_blank"
                   >jdih.ummetro.ac.id</a
                 >
@@ -497,6 +503,8 @@
             </tr>
           </tbody>
         </table>
+      </div>
+      </div>
       </div>
     </div>
   </div>
@@ -513,5 +521,9 @@ export default {
   box-shadow:
     0 1px 20px rgba(0, 0, 0, 0.1),
     0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+.warna-font {
+  color: #2D9596;
 }
 </style>

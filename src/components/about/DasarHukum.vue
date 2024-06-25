@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col gap-4 p-6 pt-10 sm:px-6 sm:pb-15 sm:mb-10 bg-white rounded-xl custom-shadow">
     <div class="border-gray-100 border-2 rounded-xl px-8 py-5">
-    <h2 class="text-2xl font-semibold text-center text-teal-500 mb-5 -mt-9 bg-white px-2 mx-auto w-fit">Dasar Hukum</h2>
+    <h2 class="text-2xl font-semibold text-center warna-font mb-5 -mt-9 bg-white px-2 mx-auto w-fit">Dasar Hukum</h2>
     <ol class="list-decimal pl-5 text-justify">
       <li>
         Undang-Undang Nomor 14 Tahun 1964 tentang Penetapan Peraturan Pemerintah Pengganti
@@ -91,5 +91,8 @@ export default {
   box-shadow:
     0 1px 20px rgba(0, 0, 0, 0.1),
     0 2px 4px rgba(0, 0, 0, 0.06);
+}
+.warna-font {
+  color: #2D9596;
 }
 </style>
