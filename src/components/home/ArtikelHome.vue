@@ -30,50 +30,50 @@
       return {
         items: [
           {
-            image: new URL('@/assets/Rectangle 42.png', import.meta.url).href,
-            date: '2 Mei 2024',
-            title: 'Pelantikan PJ Bupati Tulang Bawang Barat Dan Pengukuhan Kembali PJ Bupati Pringsewu Dan Mesuji'
-          },
-          {
-            image: new URL('@/assets/Rectangle 42.png', import.meta.url).href,
-            date: '1 Mei 2024',
-            title: 'Pelantikan PJ Bupati Tulang Bawang Barat Dan Pengukuhan Kembali PJ Bupati Pringsewu Dan Mesuji'
-          },
-          {
-            image: new URL('@/assets/Rectangle 42.png', import.meta.url).href,
-            date: '3 Mei 2024',
-            title: 'Pelantikan PJ Bupati Tulang Bawang Barat Dan Pengukuhan Kembali PJ Bupati Pringsewu Dan Mesuji'
-          },
-          {
-            image: new URL('@/assets/Rectangle 42.png', import.meta.url).href,
-            date: '4 Mei 2024',
-            title: 'Pelantikan PJ Bupati Tulang Bawang Barat Dan Pengukuhan Kembali PJ Bupati Pringsewu Dan Mesuji'
-          },
-          {
-            image: new URL('@/assets/Rectangle 42.png', import.meta.url).href,
-            date: '5 Mei 2024',
-            title: 'Pelantikan PJ Bupati Tulang Bawang Barat Dan Pengukuhan Kembali PJ Bupati Pringsewu Dan Mesuji'
-          },
-          {
-            image: new URL('@/assets/Rectangle 42.png', import.meta.url).href,
-            date: '6 Mei 2024',
-            title: 'Pelantikan PJ Bupati Tulang Bawang Barat Dan Pengukuhan Kembali PJ Bupati Pringsewu Dan Mesuji'
-          },
-          {
-            image: new URL('@/assets/Rectangle 42.png', import.meta.url).href,
-            date: '7 Mei 2024',
-            title: 'Pelantikan PJ Bupati Tulang Bawang Barat Dan Pengukuhan Kembali PJ Bupati Pringsewu Dan Mesuji'
-          },
-          {
-            image: new URL('@/assets/Rectangle 42.png', import.meta.url).href,
-            date: '8 Mei 2024',
-            title: 'Pelantikan PJ Bupati Tulang Bawang Barat Dan Pengukuhan Kembali PJ Bupati Pringsewu Dan Mesuji'
-          },
-          {
-            image: new URL('@/assets/Rectangle 42.png', import.meta.url).href,
-            date: '9 Mei 2024',
-            title: 'Pelantikan PJ Bupati Tulang Bawang Barat Dan Pengukuhan Kembali PJ Bupati Pringsewu Dan Mesuji'
-          }
+          image: new URL('@/assets/Rectangle 25.png', import.meta.url).href,
+          date: '20 Mei 2024',
+          title: 'Selamat Hari Kebangkitan Nasional'
+        },
+        {
+          image: new URL('@/assets/Rectangle 25.png', import.meta.url).href,
+          date: '20 Mei 2024',
+          title: 'Selamat Hari Kebangkitan Nasional'
+        },
+        {
+          image: new URL('@/assets/Rectangle 25.png', import.meta.url).href,
+          date: '20 Mei 2024',
+          title: 'Selamat Hari Kebangkitan Nasional'
+        },
+        {
+          image: new URL('@/assets/Rectangle 25.png', import.meta.url).href,
+          date: '20 Mei 2024',
+          title: 'Selamat Hari Kebangkitan Nasional'
+        },
+        {
+          image: new URL('@/assets/Rectangle 25.png', import.meta.url).href,
+          date: '20 Mei 2024',
+          title: 'Selamat Hari Kebangkitan Nasional'
+        },
+        {
+          image: new URL('@/assets/Rectangle 25.png', import.meta.url).href,
+          date: '20 Mei 2024',
+          title: 'Selamat Hari Kebangkitan Nasional'
+        },
+        {
+          image: new URL('@/assets/Rectangle 25.png', import.meta.url).href,
+          date: '20 Mei 2024',
+          title: 'Selamat Hari Kebangkitan Nasional'
+        },
+        {
+          image: new URL('@/assets/Rectangle 25.png', import.meta.url).href,
+          date: '20 Mei 2024',
+          title: 'Selamat Hari Kebangkitan Nasional'
+        },
+        {
+          image: new URL('@/assets/Rectangle 25.png', import.meta.url).href,
+          date: '20 Mei 2024',
+          title: 'Selamat Hari Kebangkitan Nasional'
+        }
         ]
       };
     },

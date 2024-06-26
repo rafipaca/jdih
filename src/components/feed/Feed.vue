@@ -23,49 +23,49 @@ export default {
     return {
       items: [
         {
-          image: new URL('@/assets/Rectangle 42.png', import.meta.url).href,
-          date: '2 Mei 2024',
-          title: 'Pelantikan PJ Bupati Tulang Bawang Barat Dan Pengukuhan Kembali PJ Bupati Pringsewu Dan Mesuji'
+          image: new URL('@/assets/Rectangle 25.png', import.meta.url).href,
+          date: '20 Mei 2024',
+          title: 'Selamat Hari Kebangkitan Nasional'
         },
         {
-          image: new URL('@/assets/Rectangle 42.png', import.meta.url).href,
-          date: '2 Mei 2024',
-          title: 'Pelantikan PJ Bupati Tulang Bawang Barat Dan Pengukuhan Kembali PJ Bupati Pringsewu Dan Mesuji'
+          image: new URL('@/assets/Rectangle 25.png', import.meta.url).href,
+          date: '20 Mei 2024',
+          title: 'Selamat Hari Kebangkitan Nasional'
         },
         {
-          image: new URL('@/assets/Rectangle 42.png', import.meta.url).href,
-          date: '2 Mei 2024',
-          title: 'Pelantikan PJ Bupati Tulang Bawang Barat Dan Pengukuhan Kembali PJ Bupati Pringsewu Dan Mesuji'
+          image: new URL('@/assets/Rectangle 25.png', import.meta.url).href,
+          date: '20 Mei 2024',
+          title: 'Selamat Hari Kebangkitan Nasional'
         },
         {
-          image: new URL('@/assets/Rectangle 42.png', import.meta.url).href,
-          date: '2 Mei 2024',
-          title: 'Pelantikan PJ Bupati Tulang Bawang Barat Dan Pengukuhan Kembali PJ Bupati Pringsewu Dan Mesuji'
+          image: new URL('@/assets/Rectangle 25.png', import.meta.url).href,
+          date: '20 Mei 2024',
+          title: 'Selamat Hari Kebangkitan Nasional'
         },
         {
-          image: new URL('@/assets/Rectangle 42.png', import.meta.url).href,
-          date: '2 Mei 2024',
-          title: 'Pelantikan PJ Bupati Tulang Bawang Barat Dan Pengukuhan Kembali PJ Bupati Pringsewu Dan Mesuji'
+          image: new URL('@/assets/Rectangle 25.png', import.meta.url).href,
+          date: '20 Mei 2024',
+          title: 'Selamat Hari Kebangkitan Nasional'
         },
         {
-          image: new URL('@/assets/Rectangle 42.png', import.meta.url).href,
-          date: '2 Mei 2024',
-          title: 'Pelantikan PJ Bupati Tulang Bawang Barat Dan Pengukuhan Kembali PJ Bupati Pringsewu Dan Mesuji'
+          image: new URL('@/assets/Rectangle 25.png', import.meta.url).href,
+          date: '20 Mei 2024',
+          title: 'Selamat Hari Kebangkitan Nasional'
         },
         {
-          image: new URL('@/assets/Rectangle 42.png', import.meta.url).href,
-          date: '2 Mei 2024',
-          title: 'Pelantikan PJ Bupati Tulang Bawang Barat Dan Pengukuhan Kembali PJ Bupati Pringsewu Dan Mesuji'
+          image: new URL('@/assets/Rectangle 25.png', import.meta.url).href,
+          date: '20 Mei 2024',
+          title: 'Selamat Hari Kebangkitan Nasional'
         },
         {
-          image: new URL('@/assets/Rectangle 42.png', import.meta.url).href,
-          date: '2 Mei 2024',
-          title: 'Pelantikan PJ Bupati Tulang Bawang Barat Dan Pengukuhan Kembali PJ Bupati Pringsewu Dan Mesuji'
+          image: new URL('@/assets/Rectangle 25.png', import.meta.url).href,
+          date: '20 Mei 2024',
+          title: 'Selamat Hari Kebangkitan Nasional'
         },
         {
-          image: new URL('@/assets/Rectangle 42.png', import.meta.url).href,
-          date: '2 Mei 2024',
-          title: 'Pelantikan PJ Bupati Tulang Bawang Barat Dan Pengukuhan Kembali PJ Bupati Pringsewu Dan Mesuji'
+          image: new URL('@/assets/Rectangle 25.png', import.meta.url).href,
+          date: '20 Mei 2024',
+          title: 'Selamat Hari Kebangkitan Nasional'
         }
       ]
     }
